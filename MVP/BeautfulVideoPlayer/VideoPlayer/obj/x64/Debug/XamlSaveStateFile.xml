@@ -1,15 +1,15 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\aman\desktop\beautfulvideoplayer\beautfulvideoplayer\videoplayer\obj\x64\debug\intermediatexaml\basicmediaplayback.exe" HashGuid="bb5802c8-9f96-c7de-25bb-dc37ed9b91b5" />
-    <ReferenceAssembly PathName="c:\users\aman\desktop\beautfulvideoplayer\beautfulvideoplayer\animationlibrary\bin\x64\debug\animationlibrary.winmd" HashGuid="63b3462d-a260-d1a4-0106-3d852824b5b9" />
-    <ReferenceAssembly PathName="c:\users\aman\desktop\beautfulvideoplayer\beautfulvideoplayer\applicationconfiguration\bin\x64\debug\applicationconfiguration.winmd" HashGuid="842daad3-3d9b-3e9b-6cb2-415ba3a5e22d" />
-    <ReferenceAssembly PathName="c:\users\aman\desktop\beautfulvideoplayer\beautfulvideoplayer\packages\caliburn.micro.core.2.0.0\lib\portable-net45+win8+wp8+wpa81\caliburn.micro.dll" HashGuid="9d39451b-c8d7-f78a-6a7d-71bd9b0f1167" />
-    <ReferenceAssembly PathName="c:\users\aman\desktop\beautfulvideoplayer\beautfulvideoplayer\packages\caliburn.micro.2.0.0\lib\win81\caliburn.micro.extensions.dll" HashGuid="513ef815-b782-36af-57f7-cc17eb6b6d9e" />
-    <ReferenceAssembly PathName="c:\users\aman\desktop\beautfulvideoplayer\beautfulvideoplayer\packages\caliburn.micro.2.0.0\lib\win81\caliburn.micro.platform.dll" HashGuid="c8eb7504-b912-dbe1-4877-e3409c3ad0aa" />
-    <ReferenceAssembly PathName="c:\users\aman\desktop\beautfulvideoplayer\beautfulvideoplayer\x64\debug\windowsruntimecomponent1\imageprocessing.winmd" HashGuid="c22bf1a2-664a-b447-a086-e77e91fc7cbf" />
-    <ReferenceAssembly PathName="c:\users\aman\desktop\beautfulvideoplayer\beautfulvideoplayer\logging\bin\x64\debug\logging.winmd" HashGuid="6452d507-cba0-1b20-a1e0-b132cad878c9" />
-    <ReferenceAssembly PathName="c:\users\aman\desktop\beautfulvideoplayer\beautfulvideoplayer\packages\caliburn.micro.2.0.0\lib\win81\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
-    <ReferenceAssembly PathName="c:\users\aman\desktop\beautfulvideoplayer\beautfulvideoplayer\packages\caliburn.micro.2.0.0\lib\win81\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
-    <ReferenceAssembly PathName="c:\users\aman\desktop\beautfulvideoplayer\beautfulvideoplayer\videofolders2\bin\x64\debug\videofolders.dll" HashGuid="76eaeaaa-b7bd-30ac-29f5-0f1d75f31b7b" />
+    <LocalAssembly PathName="c:\users\apervaiz\desktop\hardware\mvp\beautfulvideoplayer\videoplayer\obj\x64\debug\intermediatexaml\basicmediaplayback.exe" HashGuid="578f8eaf-8679-51aa-8d7e-d27b3c23b4c0" />
+    <ReferenceAssembly PathName="c:\users\apervaiz\desktop\hardware\mvp\beautfulvideoplayer\animationlibrary\bin\x64\debug\animationlibrary.winmd" HashGuid="63b3462d-a260-d1a4-0106-3d852824b5b9" />
+    <ReferenceAssembly PathName="c:\users\apervaiz\desktop\hardware\mvp\beautfulvideoplayer\applicationconfiguration\bin\x64\debug\applicationconfiguration.winmd" HashGuid="842daad3-3d9b-3e9b-6cb2-415ba3a5e22d" />
+    <ReferenceAssembly PathName="c:\users\apervaiz\desktop\hardware\mvp\beautfulvideoplayer\packages\caliburn.micro.core.2.0.0\lib\portable-net45+win8+wp8+wpa81\caliburn.micro.dll" HashGuid="9d39451b-c8d7-f78a-6a7d-71bd9b0f1167" />
+    <ReferenceAssembly PathName="c:\users\apervaiz\desktop\hardware\mvp\beautfulvideoplayer\packages\caliburn.micro.2.0.0\lib\win81\caliburn.micro.extensions.dll" HashGuid="513ef815-b782-36af-57f7-cc17eb6b6d9e" />
+    <ReferenceAssembly PathName="c:\users\apervaiz\desktop\hardware\mvp\beautfulvideoplayer\packages\caliburn.micro.2.0.0\lib\win81\caliburn.micro.platform.dll" HashGuid="c8eb7504-b912-dbe1-4877-e3409c3ad0aa" />
+    <ReferenceAssembly PathName="c:\users\apervaiz\desktop\hardware\mvp\beautfulvideoplayer\x64\debug\windowsruntimecomponent1\imageprocessing.winmd" HashGuid="c22bf1a2-664a-b447-a086-e77e91fc7cbf" />
+    <ReferenceAssembly PathName="c:\users\apervaiz\desktop\hardware\mvp\beautfulvideoplayer\logging\bin\x64\debug\logging.winmd" HashGuid="6452d507-cba0-1b20-a1e0-b132cad878c9" />
+    <ReferenceAssembly PathName="c:\users\apervaiz\desktop\hardware\mvp\beautfulvideoplayer\packages\caliburn.micro.2.0.0\lib\win81\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
+    <ReferenceAssembly PathName="c:\users\apervaiz\desktop\hardware\mvp\beautfulvideoplayer\packages\caliburn.micro.2.0.0\lib\win81\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
+    <ReferenceAssembly PathName="c:\users\apervaiz\desktop\hardware\mvp\beautfulvideoplayer\videofolders2\bin\x64\debug\videofolders.dll" HashGuid="79aae377-0be7-8abd-59ef-108c6a26dd54" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

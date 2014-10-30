@@ -37,6 +37,14 @@ namespace VideoFolders
             this.LoadFromXml();
         }
 
+        public Dictionary<string, ScanningFile> FileMap
+        {
+            get
+            {
+                return this.fileMap;
+            }
+        }
+
         private const string savedFolders = "SavedFolders.xml";
         private const string savedFoldersFiles = "SavedFoldersFiles.xml";
         private const string savedFileMap = "SavedFileMap.xml";

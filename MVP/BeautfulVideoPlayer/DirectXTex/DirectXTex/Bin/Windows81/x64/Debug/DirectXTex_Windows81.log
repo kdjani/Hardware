@@ -1,9 +1,9 @@
-﻿Build started 10/28/2014 8:00:16 AM.
-     1>Project "C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\DirectXTex\DirectXTex\DirectXTex_Windows81.vcxproj" on node 5 (Rebuild target(s)).
+﻿Build started 10/29/2014 6:25:32 PM.
+     1>Project "C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\DirectXTex\DirectXTex\DirectXTex_Windows81.vcxproj" on node 7 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\DirectXTex\DirectXTex\ /I"Generated Files\\" /IBin\Windows81\x64\Debug\ /Zi /ZW /ZW:nostdlib /nologo /W4 /WX- /sdl /MP /Od /Oi /D _UNICODE /D UNICODE /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /D WINAPI_FAMILY=WINAPI_FAMILY_APP /Gm- /EHsc /RTC1 /MDd /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /openmp /Yc"DirectXTexP.h" /Fp"Bin\Windows81\x64\Debug\DirectXTex.pch" /Fo"Bin\Windows81\x64\Debug\\" /Fd"Bin\Windows81\x64\Debug\DirectXTex.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\References\CommonConfiguration\neutral\platform.winmd" /FU"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral\Windows.winmd" /FU"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral\Windows.winmd" /errorReport:prompt  DirectXTexUtil.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\DirectXTex\DirectXTex\ /I"Generated Files\\" /IBin\Windows81\x64\Debug\ /Zi /ZW /ZW:nostdlib /nologo /W4 /WX- /sdl /MP /Od /Oi /D _UNICODE /D UNICODE /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /D WINAPI_FAMILY=WINAPI_FAMILY_APP /Gm- /EHsc /RTC1 /MDd /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /openmp /Yc"DirectXTexP.h" /Fp"Bin\Windows81\x64\Debug\DirectXTex.pch" /Fo"Bin\Windows81\x64\Debug\\" /Fd"Bin\Windows81\x64\Debug\DirectXTex.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\References\CommonConfiguration\neutral\platform.winmd" /FU"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral\Windows.winmd" /FU"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral\Windows.winmd" /errorReport:prompt  DirectXTexUtil.cpp
          DirectXTexUtil.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\DirectXTex\DirectXTex\ /I"Generated Files\\" /IBin\Windows81\x64\Debug\ /Zi /ZW /ZW:nostdlib /nologo /W4 /WX- /sdl /MP /Od /Oi /D _UNICODE /D UNICODE /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /D WINAPI_FAMILY=WINAPI_FAMILY_APP /Gm- /EHsc /RTC1 /MDd /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /openmp /Yu"DirectXTexP.h" /Fp"Bin\Windows81\x64\Debug\DirectXTex.pch" /Fo"Bin\Windows81\x64\Debug\\" /Fd"Bin\Windows81\x64\Debug\DirectXTex.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\References\CommonConfiguration\neutral\platform.winmd" /FU"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral\Windows.winmd" /FU"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral\Windows.winmd" /errorReport:prompt  BC.cpp BC4BC5.cpp BC6HBC7.cpp BCDirectCompute.cpp DirectXTexCompress.cpp DirectXTexCompressGPU.cpp DirectXTexConvert.cpp DirectXTexD3D11.cpp DirectXTexDDS.cpp DirectXTexFlipRotate.cpp DirectXTexImage.cpp DirectXTexMipMaps.cpp DirectXTexMisc.cpp DirectXTexNormalMaps.cpp DirectXTexPMAlpha.cpp DirectXTexResize.cpp DirectXTexTGA.cpp DirectXTexWIC.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\DirectXTex\DirectXTex\ /I"Generated Files\\" /IBin\Windows81\x64\Debug\ /Zi /ZW /ZW:nostdlib /nologo /W4 /WX- /sdl /MP /Od /Oi /D _UNICODE /D UNICODE /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /D WINAPI_FAMILY=WINAPI_FAMILY_APP /Gm- /EHsc /RTC1 /MDd /GS /Gy /fp:fast /Zc:wchar_t /Zc:forScope /openmp /Yu"DirectXTexP.h" /Fp"Bin\Windows81\x64\Debug\DirectXTex.pch" /Fo"Bin\Windows81\x64\Debug\\" /Fd"Bin\Windows81\x64\Debug\DirectXTex.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\References\CommonConfiguration\neutral\platform.winmd" /FU"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral\Windows.winmd" /FU"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral\Windows.winmd" /errorReport:prompt  BC.cpp BC4BC5.cpp BC6HBC7.cpp BCDirectCompute.cpp DirectXTexCompress.cpp DirectXTexCompressGPU.cpp DirectXTexConvert.cpp DirectXTexD3D11.cpp DirectXTexDDS.cpp DirectXTexFlipRotate.cpp DirectXTexImage.cpp DirectXTexMipMaps.cpp DirectXTexMisc.cpp DirectXTexNormalMaps.cpp DirectXTexPMAlpha.cpp DirectXTexResize.cpp DirectXTexTGA.cpp DirectXTexWIC.cpp
          BC.cpp
          BC4BC5.cpp
          BC6HBC7.cpp
@@ -23,7 +23,7 @@
          DirectXTexTGA.cpp
          DirectXTexWIC.cpp
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\Lib.exe /OUT:"Bin\Windows81\x64\Debug\DirectXTex.lib" /NOLOGO /MACHINE:X64 /IGNORE:4264 Bin\Windows81\x64\Debug\BC.obj
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\Lib.exe /OUT:"Bin\Windows81\x64\Debug\DirectXTex.lib" /NOLOGO /MACHINE:X64 /IGNORE:4264 Bin\Windows81\x64\Debug\BC.obj
          Bin\Windows81\x64\Debug\BC4BC5.obj
          Bin\Windows81\x64\Debug\BC6HBC7.obj
          Bin\Windows81\x64\Debug\BCDirectCompute.obj
@@ -42,11 +42,11 @@
          Bin\Windows81\x64\Debug\DirectXTexTGA.obj
          Bin\Windows81\x64\Debug\DirectXTexUtil.obj
          Bin\Windows81\x64\Debug\DirectXTexWIC.obj
-         DirectXTex_Windows81.vcxproj -> C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\DirectXTex\DirectXTex\Bin\Windows81\x64\Debug\DirectXTex.lib
+         DirectXTex_Windows81.vcxproj -> C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\DirectXTex\DirectXTex\Bin\Windows81\x64\Debug\DirectXTex.lib
        _GenerateProjectPriFileCore:
-         C:\Program Files (x86)\Windows Kits\8.1\bin\x64\MakePri.exe New -ProjectRoot C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\DirectXTex\DirectXTex\ -ConfigXml Bin\Windows81\x64\Debug\priconfig.xml -OutputFile C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\DirectXTex\DirectXTex\Bin\Windows81\x64\Debug\DirectXTex.pri -IndexName DirectXTex -Verbose -Overwrite  
-     1>Done Building Project "C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\DirectXTex\DirectXTex\DirectXTex_Windows81.vcxproj" (Rebuild target(s)).
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x64\MakePri.exe New -ProjectRoot C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\DirectXTex\DirectXTex\ -ConfigXml Bin\Windows81\x64\Debug\priconfig.xml -OutputFile C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\DirectXTex\DirectXTex\Bin\Windows81\x64\Debug\DirectXTex.pri -IndexName DirectXTex -Verbose -Overwrite  
+     1>Done Building Project "C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\DirectXTex\DirectXTex\DirectXTex_Windows81.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:07.43
+Time Elapsed 00:00:03.87

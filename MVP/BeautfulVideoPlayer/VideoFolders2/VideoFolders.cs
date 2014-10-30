@@ -550,6 +550,13 @@ namespace VideoFolders
                                 ScanningFile currentFile = null;
                                 while (true)
                                 {
+                                    if (fileLibrary.FileMap.Count == 0)
+                                    {
+                                        Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders No files in library ..."));
+                                        await Task.Delay(TimeSpan.FromSeconds(10));
+                                        break;
+                                    }
+
                                     currentFile = await GetNextFile();
                                     if (currentFile == null)
                                     {

@@ -91,7 +91,8 @@ namespace Logging
 
                     lines.Clear();
                 }
-                    WriteToFile(logData);
+                
+                WriteToFile(logData);
             }
         }
 

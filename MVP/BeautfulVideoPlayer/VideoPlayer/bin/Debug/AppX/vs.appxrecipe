@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>MONEKYMEDIA</Machine>
-    <WindowsUser>aman</WindowsUser>
+    <Machine>AMANDEV11</Machine>
+    <WindowsUser>apervaiz</WindowsUser>
     <SolutionConfiguration>Debug|x64</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>Microsoft.SDKSamples.BasicMediaPlayback.CS</PackageIdentityName>
@@ -14,144 +14,144 @@
     <RegisteredVersion>1.0.0.6</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-10-28T15:00:37.548</Modified>
+      <Modified>2014-10-30T01:25:47.331</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.exe">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.exe">
       <PackagePath>BasicMediaPlayback.exe</PackagePath>
-      <Modified>2014-10-28T15:00:32.829</Modified>
+      <Modified>2014-10-30T01:26:42.458</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\AnimationLibrary\bin\x64\Debug\AnimationLibrary.winmd">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\AnimationLibrary\bin\x64\Debug\AnimationLibrary.winmd">
       <PackagePath>AnimationLibrary.winmd</PackagePath>
-      <Modified>2014-10-28T15:00:18.449</Modified>
+      <Modified>2014-10-30T01:25:32.984</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\ApplicationConfiguration\bin\x64\Debug\ApplicationConfiguration.winmd">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\ApplicationConfiguration\bin\x64\Debug\ApplicationConfiguration.winmd">
       <PackagePath>ApplicationConfiguration.winmd</PackagePath>
-      <Modified>2014-10-28T15:00:18.652</Modified>
+      <Modified>2014-10-30T01:25:32.851</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\x64\Debug\WindowsRuntimeComponent1\ImageProcessing.winmd">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\x64\Debug\WindowsRuntimeComponent1\ImageProcessing.winmd">
       <PackagePath>ImageProcessing.winmd</PackagePath>
-      <Modified>2014-10-28T15:00:27.891</Modified>
+      <Modified>2014-10-30T01:25:39.978</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\Logging\bin\x64\Debug\Logging.winmd">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\Logging\bin\x64\Debug\Logging.winmd">
       <PackagePath>Logging.winmd</PackagePath>
-      <Modified>2014-10-28T15:00:16.206</Modified>
+      <Modified>2014-10-30T01:25:32.885</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\AnimationGenerator\bin\x64\Debug\AnimationGenerator.winmd">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\AnimationGenerator\bin\x64\Debug\AnimationGenerator.winmd">
       <PackagePath>AnimationGenerator.winmd</PackagePath>
-      <Modified>2014-10-28T15:00:21.086</Modified>
+      <Modified>2014-10-30T01:25:32.974</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\GifMaker\bin\x64\Debug\GifMaker.winmd">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\GifMaker\bin\x64\Debug\GifMaker.winmd">
       <PackagePath>GifMaker.winmd</PackagePath>
-      <Modified>2014-10-28T15:00:21.102</Modified>
+      <Modified>2014-10-30T01:25:32.957</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\packages\Caliburn.Micro.Core.2.0.0\lib\portable-net45+win8+wp8+wpa81\Caliburn.Micro.dll">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\packages\Caliburn.Micro.Core.2.0.0\lib\portable-net45+win8+wp8+wpa81\Caliburn.Micro.dll">
       <PackagePath>Caliburn.Micro.dll</PackagePath>
-      <Modified>2014-07-23T17:56:10.000</Modified>
+      <Modified>2014-10-30T00:52:14.166</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\packages\Caliburn.Micro.2.0.0\lib\win81\Caliburn.Micro.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\packages\Caliburn.Micro.2.0.0\lib\win81\Caliburn.Micro.Extensions.dll">
       <PackagePath>Caliburn.Micro.Extensions.dll</PackagePath>
-      <Modified>2014-07-23T17:56:12.000</Modified>
+      <Modified>2014-10-30T00:52:14.017</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\packages\Caliburn.Micro.2.0.0\lib\win81\Caliburn.Micro.Platform.dll">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\packages\Caliburn.Micro.2.0.0\lib\win81\Caliburn.Micro.Platform.dll">
       <PackagePath>Caliburn.Micro.Platform.dll</PackagePath>
-      <Modified>2014-07-23T17:56:12.000</Modified>
+      <Modified>2014-10-30T00:52:14.030</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\packages\Caliburn.Micro.2.0.0\lib\win81\Microsoft.Xaml.Interactions.dll">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\packages\Caliburn.Micro.2.0.0\lib\win81\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
-      <Modified>2014-07-23T17:56:12.000</Modified>
+      <Modified>2014-10-30T00:52:14.040</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\packages\Caliburn.Micro.2.0.0\lib\win81\Microsoft.Xaml.Interactivity.dll">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\packages\Caliburn.Micro.2.0.0\lib\win81\Microsoft.Xaml.Interactivity.dll">
       <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
-      <Modified>2014-07-23T17:56:12.000</Modified>
+      <Modified>2014-10-30T00:52:14.049</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.dll">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.dll">
       <PackagePath>VideoFolders.dll</PackagePath>
-      <Modified>2014-10-28T15:00:30.719</Modified>
+      <Modified>2014-10-30T01:26:40.850</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\AnimationLibrary\bin\x64\Debug\TCD.Serialization.dll">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\AnimationLibrary\bin\x64\Debug\TCD.Serialization.dll">
       <PackagePath>TCD.Serialization.dll</PackagePath>
-      <Modified>2014-07-20T10:12:02.000</Modified>
+      <Modified>2014-10-30T00:52:14.183</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\x64\Debug\WindowsRuntimeComponent1\ImageExtractor.dll">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\x64\Debug\WindowsRuntimeComponent1\ImageExtractor.dll">
       <PackagePath>ImageExtractor.dll</PackagePath>
-      <Modified>2014-10-28T15:00:28.110</Modified>
+      <Modified>2014-10-30T01:25:40.060</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\microsoft-sdk.png">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\Assets\microsoft-sdk.png">
       <PackagePath>Assets\microsoft-sdk.png</PackagePath>
-      <Modified>2014-06-15T00:30:32.000</Modified>
+      <Modified>2014-10-30T00:52:11.334</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\placeholder-sdk.png">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\Assets\placeholder-sdk.png">
       <PackagePath>Assets\placeholder-sdk.png</PackagePath>
-      <Modified>2014-06-15T00:30:32.000</Modified>
+      <Modified>2014-10-30T00:52:11.335</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\smallTile-sdk.png">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\Assets\smallTile-sdk.png">
       <PackagePath>Assets\smallTile-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-06-15T00:30:32.000</Modified>
+      <Modified>2014-10-30T00:52:11.335</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\splash-sdk.png">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\Assets\splash-sdk.png">
       <PackagePath>Assets\splash-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-06-15T00:30:32.000</Modified>
+      <Modified>2014-10-30T00:52:11.336</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\squareTile-sdk.png">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\Assets\squareTile-sdk.png">
       <PackagePath>Assets\squareTile-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-06-15T00:30:32.000</Modified>
+      <Modified>2014-10-30T00:52:11.337</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\storeLogo-sdk.png">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\Assets\storeLogo-sdk.png">
       <PackagePath>Assets\storeLogo-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-06-15T00:30:32.000</Modified>
+      <Modified>2014-10-30T00:52:11.337</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\tile-sdk.png">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\Assets\tile-sdk.png">
       <PackagePath>Assets\tile-sdk.png</PackagePath>
-      <Modified>2014-06-15T00:30:32.000</Modified>
+      <Modified>2014-10-30T00:52:11.338</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\windows-sdk.png">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\Assets\windows-sdk.png">
       <PackagePath>Assets\windows-sdk.png</PackagePath>
-      <Modified>2014-06-15T00:30:32.000</Modified>
+      <Modified>2014-10-30T00:52:11.338</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\oceanogc0.png">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\oceanogc0.png">
       <PackagePath>oceanogc0.png</PackagePath>
-      <Modified>2009-07-08T09:41:11.000</Modified>
+      <Modified>2014-10-30T00:52:13.061</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-10-28T15:00:32.579</Modified>
+      <Modified>2014-10-30T01:25:43.512</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationImage.xbf">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationImage.xbf">
       <PackagePath>AnimationImage.xbf</PackagePath>
-      <Modified>2014-10-28T15:00:32.579</Modified>
+      <Modified>2014-10-30T01:25:43.512</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Controls\FilesControl.xbf">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Controls\FilesControl.xbf">
       <PackagePath>Controls\FilesControl.xbf</PackagePath>
-      <Modified>2014-10-28T15:00:32.594</Modified>
+      <Modified>2014-10-30T01:25:43.512</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Controls\FolderControl.xbf">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Controls\FolderControl.xbf">
       <PackagePath>Controls\FolderControl.xbf</PackagePath>
-      <Modified>2014-10-28T15:00:32.594</Modified>
+      <Modified>2014-10-30T01:25:43.514</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-10-28T15:00:32.594</Modified>
+      <Modified>2014-10-30T01:25:43.516</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Common\StandardStyles.xbf">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Common\StandardStyles.xbf">
       <PackagePath>Common\StandardStyles.xbf</PackagePath>
-      <Modified>2014-10-28T15:00:32.594</Modified>
+      <Modified>2014-10-30T01:25:43.518</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Sample-Utils\SampleTemplateStyles.xbf">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Sample-Utils\SampleTemplateStyles.xbf">
       <PackagePath>Sample-Utils\SampleTemplateStyles.xbf</PackagePath>
-      <Modified>2014-10-28T15:00:32.594</Modified>
+      <Modified>2014-10-30T01:25:43.518</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\apervaiz\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-10-28T15:00:33.329</Modified>
+      <Modified>2014-10-30T01:25:44.107</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
