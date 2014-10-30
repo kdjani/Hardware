@@ -101,7 +101,7 @@ void loop() {
                 Serial.println("Uploading - Start");
 		Process p;
                 p.begin("python");
-                p.addParameter("/mnt/sd/arduino/www/mysketch/Uploader.py");
+                p.addParameter("/mnt/sd/arduino/www/mysketch/Uploader_exceptions.py");
                 p.addParameter("foo"); // A command line parameter for the script
                 p.addParameter("&2>1"); // pipe error output to stdout
                 p.run(); // blocking call to run python; ATMega execution halts until complete
