@@ -1,0 +1,16 @@
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\AnimationGenerator\AnimationGenerator.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\AnimationLibrary\AnimationLibrary.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\AnimationLibrary\AnimationLibrary.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\ApplicationConfiguration\ApplicationConfiguration.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\ApplicationConfiguration\ApplicationConfiguration.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\ApplicationConfiguration\ApplicationConfiguration.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\ApplicationConfiguration\ApplicationConfiguration.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\GifGenerator\WindowsRuntimeComponent1.vcxproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\GifGenerator\WindowsRuntimeComponent1.vcxproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\GifMaker\GifMaker.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\Logging\Logging.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\Logging\Logging.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\Logging\Logging.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\Logging\Logging.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\VideoFolders.csproj;x64
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\MusicVideoPlayer.csproj;x64

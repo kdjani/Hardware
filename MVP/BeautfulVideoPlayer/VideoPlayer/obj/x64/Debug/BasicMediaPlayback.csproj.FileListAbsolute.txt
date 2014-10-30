@@ -1,0 +1,181 @@
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Assets\microsoft-sdk.png
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Assets\placeholder-sdk.png
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Assets\smallTile-sdk.png
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Assets\splash-sdk.png
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Assets\squareTile-sdk.png
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Assets\storeLogo-sdk.png
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Assets\tile-sdk.png
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Assets\windows-sdk.png
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\App.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Scenario6.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Scenario5.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Scenario4.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Scenario3.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Scenario2.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Scenario1.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\MainPage.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Common\StandardStyles.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\Sample-Utils\SampleTemplateStyles.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\BasicMediaPlayback.exe
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\BasicMediaPlayback.pdb
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\WindowsRuntimeComponent1.winmd
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\WindowsRuntimeComponent1.pdb
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\App.g.i.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\App.g.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario6.g.i.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario6.g.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario5.g.i.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario5.g.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario4.g.i.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario4.g.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario3.g.i.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario3.g.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario2.g.i.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario2.g.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario1.g.i.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario1.g.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\MainPage.g.i.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\MainPage.g.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Common\StandardStyles.g.i.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Common\StandardStyles.g.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.g.i.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.g.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\XamlTypeInfo.g.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\App.xaml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario6.xaml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario5.xaml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario4.xaml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario3.xaml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario2.xaml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario1.xaml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\MainPage.xaml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Common\StandardStyles.xaml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.xaml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\App.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario6.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario5.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario4.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario3.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario2.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Scenario1.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\MainPage.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Common\StandardStyles.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\XamlSaveStateFile.xml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\BasicMediaPlayback.exe
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\BasicMediaPlayback.pdb
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\resources.pri
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\AppxManifest.xml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\BasicMediaPlayback.build.appxrecipe
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\WindowsRuntimeComponent1.pri
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\BasicMediaPlayback.csproj.GenerateResource.Cache
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\priconfig.xml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\layout.resfiles
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\layout.resfiles.intermediate
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\resources.resfiles
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\pri.resfiles
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\qualifiers.txt
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\ProjectArchitectures.txt
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\BasicMediaPlayback.csprojResolveAssemblyReference.cache
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\bin\Debug\AnimationImage.xbf
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\AnimationImage.g.i.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\AnimationImage.g.cs
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\AnimationImage.xaml
+C:\Users\apervaiz\Downloads\XAML media playback sample\C#\obj\x64\Debug\AnimationImage.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario6.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario6.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario5.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario5.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario4.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario4.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario3.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario3.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario2.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario2.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario1.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario1.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\XamlTypeInfo.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario6.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario5.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario4.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario3.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario2.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario1.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario6.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario5.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario4.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario3.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario2.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Scenario1.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\XamlSaveStateFile.xml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\BasicMediaPlayback.exe
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\BasicMediaPlayback.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\microsoft-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\placeholder-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\smallTile-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\splash-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\squareTile-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\storeLogo-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\tile-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\windows-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\App.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationImage.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Scenario6.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Scenario5.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Scenario4.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Scenario3.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Scenario2.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Scenario1.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\MainPage.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Common\StandardStyles.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Sample-Utils\SampleTemplateStyles.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.exe
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\WindowsRuntimeComponent1.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\WindowsRuntimeComponent1.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\BasicMediaPlayback.csprojResolveAssemblyReference.cache
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\WindowsRuntimeComponent1.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\resources.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AppxManifest.xml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.build.appxrecipe
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\BasicMediaPlayback.csproj.GenerateResource.Cache
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\priconfig.xml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\layout.resfiles
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\layout.resfiles.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\resources.resfiles
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\pri.resfiles
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\qualifiers.txt
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\ProjectArchitectures.txt
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Logging.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Logging.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Logging.pri

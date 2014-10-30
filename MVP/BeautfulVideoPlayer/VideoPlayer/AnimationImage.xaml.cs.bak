@@ -1,0 +1,284 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Windows.Graphics.Imaging;
+using Windows.Storage;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Imaging;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.UI.Xaml.Media.Animation;
+using Windows.Storage.Streams;
+using Windows.Security.Cryptography;
+using Windows.Security.Cryptography.Core;
+using System.Threading.Tasks;
+
+namespace TriGemini.Controls
+{
+    /// <summary>
+    ///  AnimationImage control
+    /// </summary>
+    public sealed partial class AnimationImage : UserControl
+    {
+        #region Private Fields
+        private static readonly DependencyProperty _imageUrlProperty = DependencyProperty.Register
+        (
+          "ImageUrl", typeof(StorageFile), typeof(AnimationImage), new PropertyMetadata(String.Empty, ImageUrlPropertyChanged)
+        );
+
+        private readonly List<WriteableBitmap> _bitmapFrames = new List<WriteableBitmap>();
+        private bool _playOnLoad = true;
+        #endregion
+
+        #region Public Properties
+        /// <summary>
+        /// Gets or sets the url of the image e.g. "/Assets/MyAnimation.gif"
+        /// </summary>
+        public StorageFile ImageUrl
+        {
+            get
+            {
+                return (StorageFile)GetValue(_imageUrlProperty);
+            }
+            set
+            {
+                SetValue(_imageUrlProperty, value);
+            }
+        }
+
+        private List<WriteableBitmap> writeableBitmap;
+        private List<BitmapFrame> listOfFrames;
+        private BitmapTransform bitmapTransform;
+        private List<DiscreteObjectKeyFrame> keyFrame;
+
+        public bool PlayOnLoad
+        {
+            get
+            {
+                return _playOnLoad;
+            }
+            set
+            {
+                _playOnLoad = value;
+            }
+        }
+        #endregion
+
+        #region Constructors
+        public AnimationImage()
+        {
+            this.InitializeComponent();
+            SetupAnimationDataStructures();
+            anim = new ObjectAnimationUsingKeyFrames();
+            keyFrame = new List<DiscreteObjectKeyFrame>();
+
+            for (int i = 0; i < ApplicationConfiguration.Configuration.Category1Frames; i++)
+            {
+                keyFrame.Add(new DiscreteObjectKeyFrame());
+            }
+
+            ts = new TimeSpan();
+
+            this.animationLoaded = false;
+
+            //WatchForAvaialableAnimations();
+
+            this.thumbnailMode = true;
+        }
+
+
+        async private void SetupAnimationDataStructures()
+        {
+            this.writeableBitmap = new List<WriteableBitmap>();
+
+            for (int i = 0; i < ApplicationConfiguration.Configuration.Category1Frames; i++)
+            {
+                this.writeableBitmap.Add(new WriteableBitmap(ApplicationConfiguration.Configuration.ImageWidth, ApplicationConfiguration.Configuration.ImageHeight));
+            }
+
+            this.bitmapTransform = new BitmapTransform();
+
+            listOfFrames = new List<BitmapFrame>();
+        }
+
+        private ObjectAnimationUsingKeyFrames anim;
+
+        private TimeSpan ts;
+
+        private bool animationLoaded;
+
+        #endregion
+
+        #region Private Methods
+
+        private async void WatchForAvaialableAnimations()
+        {
+            while (true)
+            {
+                await Task.Delay(TimeSpan.FromSeconds(3)); // TODO
+                if (this.animationLoaded)
+                {
+                    this.animationLoaded = false;
+                    SetupAnimation();
+                }
+            }
+        }
+
+        private bool thumbnailMode;
+
+        private void SetupAnimation()
+        {
+            BuildStoryBoard();
+
+            if (PlayOnLoad)
+            {
+                storyboard.Begin();
+
+                if (ImageLoaded != null)
+                {
+                    ImageLoaded(this, null);
+                }
+            }
+        }
+
+        private async void LoadImage()
+        {
+            if (ImageUrl == null)
+            {
+                return;
+            }
+
+            var thumbnail = await ImageUrl.GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode.VideosView);
+
+            WriteableBitmap image = new WriteableBitmap((int)thumbnail.OriginalWidth, (int)thumbnail.OriginalHeight);
+            image.SetSource(thumbnail);
+
+            _bitmapFrames.Add(image);
+
+            this.thumbnailMode = true;
+            SetupAnimation();
+
+            _bitmapFrames.Clear();
+
+            try
+            {
+                this.animationLoaded = false;
+
+                // TODO Get from library
+                string hash = ComputeMD5(ImageUrl.Path);
+                StorageFolder storageFolder = null;
+                storageFolder = await ApplicationData.Current.LocalFolder.GetFolderAsync(hash);
+                IReadOnlyList<StorageFile> fileList = await storageFolder.GetFilesAsync();
+                foreach (StorageFile sampleFile in fileList)
+                {
+                    using (var res = await sampleFile.OpenAsync(FileAccessMode.Read))
+                    {
+                        var decoder = await BitmapDecoder.CreateAsync(BitmapDecoder.PngDecoderId, res);
+                        var frame = await decoder.GetFrameAsync(0);
+                        var writeableBitmap = new WriteableBitmap((int)decoder.OrientedPixelWidth, (int)decoder.OrientedPixelHeight);
+
+                        //  Extract the pixel data and fill the WriteableBitmap with them
+                        var bitmapTransform = new BitmapTransform();
+                        var pixelDataProvider = await frame.GetPixelDataAsync(BitmapPixelFormat.Bgra8, decoder.BitmapAlphaMode, bitmapTransform, ExifOrientationMode.IgnoreExifOrientation, ColorManagementMode.DoNotColorManage);
+                        var pixels = pixelDataProvider.DetachPixelData();
+
+                        using (var stream = writeableBitmap.PixelBuffer.AsStream())
+                        {
+                            stream.Write(pixels, 0, pixels.Length);
+                        }
+
+                        //  Finally we have a frame (WriteableBitmap) that can internally be stored.
+                        _bitmapFrames.Add(writeableBitmap);
+                    }
+                }
+
+                this.animationLoaded = true;
+                this.thumbnailMode = false;
+                SetupAnimation();
+            }
+            catch (Exception e)
+            {
+                //  Yeah, I know this is kinda' "cowboyish" - but hey, I don't want it to fail in the designer!
+                if (!Windows.ApplicationModel.DesignMode.DesignModeEnabled)
+                {
+                    throw;
+                }
+            }
+        }
+
+        public static string ComputeMD5(string str)
+        {
+            var alg = HashAlgorithmProvider.OpenAlgorithm("MD5");
+            IBuffer buff = CryptographicBuffer.ConvertStringToBinary(str, BinaryStringEncoding.Utf8);
+            var hashed = alg.HashData(buff);
+            var res = CryptographicBuffer.EncodeToHexString(hashed);
+            return res;
+        }
+
+        private void BuildStoryBoard()
+        {
+            //  Clear the story board, if it has previously been filled
+            if (storyboard.Children.Count > 0)
+            {
+                storyboard.Stop();
+                storyboard.Children.Clear();
+            }
+
+            //  Now create the animation as a set of ObjectAnimationUsingKeyFrames (I love this name!)
+            anim.BeginTime = TimeSpan.FromSeconds(0);
+
+            var speed = TimeSpan.FromMilliseconds(ApplicationConfiguration.Configuration.Category1Delay);
+
+            // Create each DiscreteObjectKeyFrame and advance the KeyTime by 100 ms (=10 fps) and add it to the storyboard.
+            anim.KeyFrames.Clear();
+            for (int frameIndex = 0; frameIndex < 5; frameIndex++)
+            {
+                keyFrame[frameIndex].KeyTime = KeyTime.FromTimeSpan(ts);
+                keyFrame[frameIndex].Value = _bitmapFrames[frameIndex];
+                ts = ts.Add(speed);
+                anim.KeyFrames.Add(keyFrame[frameIndex]);
+
+                if (this.thumbnailMode)
+                {
+                    break;
+                }
+            }
+
+            //  Connect the image control with the story board
+            Storyboard.SetTarget(anim, image);
+            Storyboard.SetTargetProperty(anim, "Source");
+
+            //  And finally add the animation-set to the storyboard
+            if (storyboard.Children.Count == 0)
+            {
+                storyboard.Children.Add(anim);
+            }
+            else
+            {
+                storyboard.Children[0] = anim;
+            }
+        }
+
+        private static void ImageUrlPropertyChanged(object sender, DependencyPropertyChangedEventArgs args)
+        {
+            if ((((Windows.UI.Xaml.Controls.UserControl)(sender)).Content).Visibility == Visibility.Visible)
+            {
+                //http://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh780657.aspx
+                var control = (AnimationImage)sender;
+                control.LoadImage();
+            }
+            else
+            {
+
+            }
+        }
+        #endregion
+
+        #region Public Events
+        /// <summary>
+        /// Fired whenever the image has loaded
+        /// </summary>
+        public EventHandler ImageLoaded;
+        #endregion
+    }
+}

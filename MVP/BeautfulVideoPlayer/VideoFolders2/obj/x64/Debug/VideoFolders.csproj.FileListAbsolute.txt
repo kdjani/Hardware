@@ -1,0 +1,105 @@
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\VideoFolders.csprojResolveAssemblyReference.cache
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.dll
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationGenerator.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationLibrary.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ApplicationConfiguration.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\GifMaker.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ImageProcessing.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\Logging.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\TCD.Serialization.dll
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationGenerator.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationGenerator.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationLibrary.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationLibrary.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ApplicationConfiguration.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ApplicationConfiguration.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ImageProcessing.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\GifMaker.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\GifMaker.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\Logging.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\Logging.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\VideoFolders.dll
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\VideoFolders.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\priconfig.xml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\layout.resfiles
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\layout.resfiles.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\resources.resfiles
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\pri.resfiles
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\qualifiers.txt
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationGenerator.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationLibrary.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ApplicationConfiguration.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\GifMaker.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ImageProcessing.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\Logging.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\TCD.Serialization.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationGenerator.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationGenerator.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationLibrary.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationLibrary.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ApplicationConfiguration.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ApplicationConfiguration.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ImageProcessing.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\GifMaker.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\GifMaker.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\Logging.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\Logging.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\VideoFolders.csprojResolveAssemblyReference.cache
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\VideoFolders.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\VideoFolders.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\priconfig.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\layout.resfiles
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\layout.resfiles.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\resources.resfiles
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\pri.resfiles
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\qualifiers.txt
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationGenerator.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationLibrary.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ApplicationConfiguration.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\GifMaker.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ImageProcessing.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\Logging.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\TCD.Serialization.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationGenerator.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationGenerator.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationLibrary.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\AnimationLibrary.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ApplicationConfiguration.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ApplicationConfiguration.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\ImageProcessing.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\GifMaker.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\GifMaker.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\Logging.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\Logging.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\VideoFolders.csprojResolveAssemblyReference.cache
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\VideoFolders.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\VideoFolders.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\priconfig.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\layout.resfiles
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\layout.resfiles.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\resources.resfiles
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\pri.resfiles
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\qualifiers.txt
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt

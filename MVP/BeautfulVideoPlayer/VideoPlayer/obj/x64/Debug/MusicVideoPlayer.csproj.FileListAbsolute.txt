@@ -1,0 +1,260 @@
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\microsoft-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\placeholder-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\smallTile-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\splash-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\squareTile-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\storeLogo-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\tile-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\windows-sdk.png
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\App.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationImage.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\MainPage.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Common\StandardStyles.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Sample-Utils\SampleTemplateStyles.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.exe
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\resources.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AppxManifest.xml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\MusicVideoPlayer.build.appxrecipe
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Logging.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Logging.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Logging.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MusicVideoPlayer.csprojResolveAssemblyReference.cache
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.g.i.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\XamlTypeInfo.g.cs
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.xaml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.xbf
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\XamlSaveStateFile.xml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\BasicMediaPlayback.exe
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\BasicMediaPlayback.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MusicVideoPlayer.csproj.GenerateResource.Cache
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\priconfig.xml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\layout.resfiles
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\layout.resfiles.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\resources.resfiles
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\pri.resfiles
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\qualifiers.txt
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\ProjectArchitectures.txt
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ApplicationConfiguration.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\VideoFolders.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\VideoFolders.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ApplicationConfiguration.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ApplicationConfiguration.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ImageProcessing.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ImageProcessing.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationLibrary.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationLibrary.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationLibrary.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\TCD.Serialization.dll
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\VideoFolders.dll
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.dll
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Extensions.dll
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Platform.dll
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Microsoft.Xaml.Interactions.dll
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Microsoft.Xaml.Interactivity.dll
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.xml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Extensions.xml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Extensions.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Platform.xml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Platform.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Caliburn.Micro.Extensions.pri.xml
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Caliburn.Micro.Platform.pri.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\microsoft-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\placeholder-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\smallTile-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\splash-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\squareTile-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\storeLogo-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\tile-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\windows-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\App.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationImage.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\MainPage.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Common\StandardStyles.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Sample-Utils\SampleTemplateStyles.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.xr.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.exe
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationLibrary.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ApplicationConfiguration.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Extensions.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Platform.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ImageProcessing.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Logging.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Microsoft.Xaml.Interactions.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Microsoft.Xaml.Interactivity.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\VideoFolders.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\TCD.Serialization.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationLibrary.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationLibrary.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ApplicationConfiguration.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ApplicationConfiguration.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ImageProcessing.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Logging.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Logging.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\VideoFolders.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\VideoFolders.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Extensions.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Extensions.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Platform.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Platform.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MusicVideoPlayer.csprojResolveAssemblyReference.cache
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.g.i.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.g.i.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.g.i.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.g.i.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.g.i.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\XamlTypeInfo.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.xaml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.xaml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.xaml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.xaml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.xaml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\XamlSaveStateFile.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\BasicMediaPlayback.exe
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\BasicMediaPlayback.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\resources.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AppxManifest.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\bin\Debug\MusicVideoPlayer.build.appxrecipe
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MusicVideoPlayer.csproj.GenerateResource.Cache
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\priconfig.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\layout.resfiles
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\layout.resfiles.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\resources.resfiles
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\pri.resfiles
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\qualifiers.txt
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Caliburn.Micro.Extensions.pri.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Caliburn.Micro.Platform.pri.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer (2)\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\ProjectArchitectures.txt
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\microsoft-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\placeholder-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\smallTile-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\splash-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\squareTile-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\storeLogo-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\tile-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Assets\windows-sdk.png
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\App.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationImage.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\MainPage.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Common\StandardStyles.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Sample-Utils\SampleTemplateStyles.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.exe
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\resources.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AppxManifest.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\MusicVideoPlayer.build.appxrecipe
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationLibrary.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ApplicationConfiguration.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Extensions.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Platform.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ImageProcessing.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Logging.winmd
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Microsoft.Xaml.Interactions.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Microsoft.Xaml.Interactivity.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\VideoFolders.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\TCD.Serialization.dll
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationLibrary.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationLibrary.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ApplicationConfiguration.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ApplicationConfiguration.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\ImageProcessing.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Logging.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Logging.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\VideoFolders.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\VideoFolders.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Extensions.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Extensions.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Platform.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Caliburn.Micro.Platform.pri
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MusicVideoPlayer.csprojResolveAssemblyReference.cache
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.g.i.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.g.i.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.g.i.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.g.i.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.g.i.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\XamlTypeInfo.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.xaml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.xaml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.xaml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.xaml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.xaml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\App.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\AnimationImage.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MainPage.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Common\StandardStyles.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Sample-Utils\SampleTemplateStyles.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\XamlSaveStateFile.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\BasicMediaPlayback.exe
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\BasicMediaPlayback.pdb
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MusicVideoPlayer.csproj.GenerateResource.Cache
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\priconfig.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\layout.resfiles
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\layout.resfiles.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\resources.resfiles
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\pri.resfiles
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\qualifiers.txt
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Caliburn.Micro.Extensions.pri.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Caliburn.Micro.Platform.pri.xml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\ProjectArchitectures.txt
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Controls\FilesControl.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Controls\FolderControl.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Controls\FilesControl.g.i.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Controls\FilesControl.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Controls\FolderControl.g.i.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Controls\FolderControl.g.cs
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Controls\FilesControl.xaml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Controls\FolderControl.xaml
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Controls\FilesControl.xbf
+C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\obj\x64\Debug\Controls\FolderControl.xbf

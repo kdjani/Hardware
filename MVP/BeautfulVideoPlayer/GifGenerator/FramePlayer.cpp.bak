@@ -1,0 +1,1020 @@
+//
+// THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF
+// ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+// THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+// PARTICULAR PURPOSE.
+//
+// Copyright (c) Microsoft Corporation. All rights reserved.
+//
+
+#include "pch.h"
+#include "FramePlayer.h"
+#include <d3dmanagerlock.hxx>
+
+#include "C:\Users\apervaiz\Downloads\DirectXTex\DirectXTex\DirectXTex.h"
+#include <wincodec.h>
+
+using namespace std;
+using namespace Microsoft::WRL;
+using namespace Windows::System::Threading;
+using namespace Windows::Foundation;
+using namespace Windows::ApplicationModel::Core;
+using namespace Windows::UI::Core;
+using namespace Windows::Storage;
+using namespace Windows::Storage::Pickers;
+using namespace Windows::Storage::Streams;
+using namespace concurrency;
+using namespace DirectX;
+using namespace Windows::UI::Xaml;
+using namespace Windows::Foundation;
+
+// MediaEngineNotify: Implements the callback for Media Engine event notification.
+class MediaEngineNotify : public IMFMediaEngineNotify
+{
+	long m_cRef;
+	Platform::Agile<Windows::UI::Core::CoreWindow> m_cWindow;
+	MediaEngineNotifyCallback^ m_pCB;
+
+public:
+	MediaEngineNotify(Platform::Agile<Windows::UI::Core::CoreWindow> cWindow) : m_cWindow(cWindow), m_cRef(1), m_pCB(nullptr)
+	{
+	}
+
+	STDMETHODIMP QueryInterface(REFIID riid, void** ppv)
+	{
+		if (__uuidof(IMFMediaEngineNotify) == riid)
+		{
+			*ppv = static_cast<IMFMediaEngineNotify*>(this);
+		}
+		else
+		{
+			*ppv = nullptr;
+			return E_NOINTERFACE;
+		}
+
+		AddRef();
+
+		return S_OK;
+	}
+
+	STDMETHODIMP_(ULONG) AddRef()
+	{
+		return InterlockedIncrement(&m_cRef);
+	}
+
+	STDMETHODIMP_(ULONG) Release()
+	{
+		LONG cRef = InterlockedDecrement(&m_cRef);
+		if (cRef == 0)
+		{
+			delete this;
+		}
+		return cRef;
+	}
+
+	// EventNotify is called when the Media Engine sends an event.
+	STDMETHODIMP EventNotify(DWORD meEvent, DWORD_PTR param1, DWORD param2)
+	{
+		if (meEvent == MF_MEDIA_ENGINE_EVENT_NOTIFYSTABLESTATE)
+		{
+			SetEvent(reinterpret_cast<HANDLE>(param1));
+		}
+		else
+		{
+			m_pCB->OnMediaEngineEvent(meEvent);
+		}
+
+		return S_OK;
+	}
+
+	void MediaEngineNotifyCallback(MediaEngineNotifyCallback^ pCB)
+	{
+		m_pCB = pCB;
+	}
+};
+
+FramePlayer::FramePlayer() :
+m_spDX11Device(nullptr),
+m_spDX11DeviceContext(nullptr),
+m_spDXGIOutput(nullptr),
+m_spDX11SwapChain(nullptr),
+m_spDXGIManager(nullptr),
+m_spMediaEngine(nullptr),
+m_spEngineEx(nullptr),
+m_bstrURL(nullptr),
+m_TimerThreadHandle(nullptr),
+m_fPlaying(FALSE),
+m_fLoop(FALSE),
+m_fEOS(FALSE),
+m_fStopTimer(TRUE),
+m_d3dFormat(DXGI_FORMAT_B8G8R8A8_UNORM),
+m_fInitSuccess(FALSE),
+m_fExitApp(FALSE),
+m_fUseDX(TRUE)
+{
+	m_initialissss = false;
+	memset(&m_bkgColor, 0, sizeof(MFARGB));
+
+	InitializeCriticalSectionEx(&m_critSec, 0, 0);
+
+	m_VideoLast = 0;
+}
+
+FramePlayer::~FramePlayer()
+{
+	Shutdown();
+
+	MFShutdown();
+
+	DeleteCriticalSection(&m_critSec);
+
+}
+
+//+-------------------------------------------------------------------------
+//
+//  Function:   CreateDX11Device()
+//
+//  Synopsis:   creates a default device
+//
+//--------------------------------------------------------------------------
+void FramePlayer::CreateDX11Device()
+{
+	static const D3D_FEATURE_LEVEL levels[] = {
+		/*
+		D3D_FEATURE_LEVEL_11_1,
+		D3D_FEATURE_LEVEL_11_0,
+		D3D_FEATURE_LEVEL_10_1,
+		D3D_FEATURE_LEVEL_10_0,
+		*/
+		D3D_FEATURE_LEVEL_9_3,
+		D3D_FEATURE_LEVEL_9_2,
+		D3D_FEATURE_LEVEL_9_1
+	};
+
+	D3D_FEATURE_LEVEL FeatureLevel;
+	HRESULT hr = S_OK;
+
+	if (m_fUseDX)
+	{
+		hr = D3D11CreateDevice(
+			nullptr,
+			D3D_DRIVER_TYPE_HARDWARE,
+			nullptr,
+			D3D11_CREATE_DEVICE_VIDEO_SUPPORT | D3D11_CREATE_DEVICE_BGRA_SUPPORT,
+			levels,
+			ARRAYSIZE(levels),
+			D3D11_SDK_VERSION,
+			&m_spDX11Device,
+			&FeatureLevel,
+			&m_spDX11DeviceContext
+			);
+	}
+
+	//Failed to create DX11 Device (using VM?), create device using WARP
+	if (FAILED(hr))
+	{
+		m_fUseDX = FALSE;
+	}
+
+	if (!m_fUseDX)
+	{
+		MEDIA::ThrowIfFailed(D3D11CreateDevice(
+			nullptr,
+			D3D_DRIVER_TYPE_WARP,
+			nullptr,
+			D3D11_CREATE_DEVICE_BGRA_SUPPORT,
+			levels,
+			ARRAYSIZE(levels),
+			D3D11_SDK_VERSION,
+			&m_spDX11Device,
+			&FeatureLevel,
+			&m_spDX11DeviceContext
+			));
+	}
+
+	if (m_fUseDX)
+	{
+		ComPtr<ID3D10Multithread> spMultithread;
+		MEDIA::ThrowIfFailed(
+			m_spDX11Device.Get()->QueryInterface(IID_PPV_ARGS(&spMultithread))
+			);
+		spMultithread->SetMultithreadProtected(TRUE);
+	}
+
+	return;
+}
+
+HRESULT FramePlayer::DXGIDeviceTrim()
+{
+	HRESULT hr = S_OK;
+	if (m_fUseDX && m_spDX11Device != nullptr)
+	{
+		IDXGIDevice3 *pDXGIDevice;
+		hr = m_spDX11Device.Get()->QueryInterface(__uuidof(IDXGIDevice3), (void **)&pDXGIDevice);
+		if (hr == S_OK)
+		{
+			pDXGIDevice->Trim();
+		}
+	}
+
+	UINT resetToken;
+	MEDIA::ThrowIfFailed(
+		MFCreateDXGIDeviceManager(&resetToken, &m_spDXGIManager)
+		);
+
+	MEDIA::ThrowIfFailed(
+		m_spDXGIManager->ResetDevice(m_spDX11Device.Get(), resetToken)
+		);
+
+	return hr;
+}
+
+
+//+-----------------------------------------------------------------------------
+//
+//  Function:   CreateBackBuffers
+//
+//  Synopsis:   Creates the D3D back buffers
+//
+//------------------------------------------------------------------------------
+void FramePlayer::CreateBackBuffers()
+{
+	EnterCriticalSection(&m_critSec);
+
+	// make sure everything is released first;    
+	if (m_spDX11Device)
+	{
+		// Acquire the DXGIdevice lock 
+		CAutoDXGILock DXGILock(m_spDXGIManager);
+
+		ComPtr<ID3D11Device> spDevice;
+		MEDIA::ThrowIfFailed(
+			DXGILock.LockDevice(/*out*/spDevice)
+			);
+
+		// swap chain does not exist - so create it
+		if (m_spDX11SwapChain == nullptr)
+		{
+			DXGI_SWAP_CHAIN_DESC1 swapChainDesc = { 0 };
+
+			// Don't use Multi-sampling
+			swapChainDesc.SampleDesc.Count = 1;
+			swapChainDesc.SampleDesc.Quality = 0;
+
+			swapChainDesc.BufferUsage = DXGI_USAGE_BACK_BUFFER | DXGI_USAGE_RENDER_TARGET_OUTPUT;
+			swapChainDesc.Scaling = DXGI_SCALING_NONE;
+			swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL;
+
+			// Use more than 1 buffer to enable Flip effect.
+			swapChainDesc.BufferCount = 4;
+
+			// Most common swapchain format is DXGI_FORMAT_R8G8B8A8-UNORM
+			swapChainDesc.Format = m_d3dFormat;
+			swapChainDesc.Width = m_rcTarget.right;
+			swapChainDesc.Height = m_rcTarget.bottom;
+
+			// long QI chain to get DXGIFactory from the device
+			ComPtr<IDXGIDevice2> spDXGIDevice;
+			MEDIA::ThrowIfFailed(
+				spDevice.Get()->QueryInterface(IID_PPV_ARGS(&spDXGIDevice))
+				);
+
+			// Ensure that DXGI does not queue more than one frame at a time. This both reduces 
+			// latency and ensures that the application will only render after each VSync, minimizing 
+			// power consumption.
+			MEDIA::ThrowIfFailed(
+				spDXGIDevice->SetMaximumFrameLatency(1)
+				);
+
+			ComPtr<IDXGIAdapter> spDXGIAdapter;
+			MEDIA::ThrowIfFailed(
+				spDXGIDevice->GetParent(IID_PPV_ARGS(&spDXGIAdapter))
+				);
+
+			ComPtr<IDXGIFactory2> spDXGIFactory;
+			MEDIA::ThrowIfFailed(
+				spDXGIAdapter->GetParent(IID_PPV_ARGS(&spDXGIFactory))
+				);
+
+			// and then we pass the device to the factory...
+			MEDIA::ThrowIfFailed(
+				spDXGIFactory.Get()->CreateSwapChainForCoreWindow(spDevice.Get(), reinterpret_cast<IUnknown*>((Windows::UI::Core::CoreWindow^)m_window.Get()), &swapChainDesc, nullptr, &m_spDX11SwapChain)
+				);
+
+
+			//make first texture cpu readable
+			D3D11_TEXTURE2D_DESC texDesc = { 0 };
+			texDesc.Width = 600;
+			texDesc.Height = 400;
+			texDesc.MipLevels = 0;
+			texDesc.ArraySize = 1;
+			texDesc.Format = DXGI_FORMAT_B8G8R8A8_UNORM;
+			texDesc.SampleDesc.Count = 1;
+			texDesc.SampleDesc.Quality = 0;
+			texDesc.Usage = D3D11_USAGE_STAGING;
+			texDesc.BindFlags = 0;
+			texDesc.CPUAccessFlags = D3D11_CPU_ACCESS_READ;
+			texDesc.MiscFlags = 0;
+
+			MEDIA::ThrowIfFailed(m_spDX11Device->CreateTexture2D(&texDesc, NULL, &m_spRenderTexture));
+
+			//Make Second Texture as a render target.
+			texDesc.Usage = D3D11_USAGE_DEFAULT;
+			texDesc.BindFlags = D3D11_BIND_RENDER_TARGET;
+			texDesc.CPUAccessFlags = 0;
+
+			MEDIA::ThrowIfFailed(m_spDX11Device->CreateTexture2D(&texDesc, NULL, &m_spCopyTexture));
+		}
+		else
+		{
+			// otherwise just resize it
+			MEDIA::ThrowIfFailed(m_spDX11SwapChain->ResizeBuffers(
+				4,
+				m_rcTarget.right,
+				m_rcTarget.bottom,
+				m_d3dFormat,
+				0
+				));
+		}
+
+	}
+
+	LeaveCriticalSection(&m_critSec);
+
+	return;
+}
+
+void FramePlayer::SetFileHash(Platform::String^ hash)
+{
+	m_hash = hash;
+}
+
+// Create a new instance of the Media Engine.
+void FramePlayer::Initialize(Windows::UI::Core::CoreWindow^ window)
+{
+	ComPtr<IMFMediaEngineClassFactory> spFactory;
+	ComPtr<IMFAttributes> spAttributes;
+	ComPtr<MediaEngineNotify> spNotify;
+
+	HRESULT hr = S_OK;
+
+	m_window = window;
+
+	// Get the bounding rectangle of the window.
+	m_rcTarget.left = 0;
+	m_rcTarget.top = 0;
+	m_rcTarget.right = (LONG)600;//m_window->Bounds.Width;
+	m_rcTarget.bottom = (LONG)400;//m_window->Bounds.Height;
+
+	MEDIA::ThrowIfFailed(MFStartup(MF_VERSION));
+
+	EnterCriticalSection(&m_critSec);
+
+	try
+	{
+			CreateDX11Device();
+
+		UINT resetToken;
+		MEDIA::ThrowIfFailed(
+			MFCreateDXGIDeviceManager(&resetToken, &m_spDXGIManager)
+			);
+
+		MEDIA::ThrowIfFailed(
+			m_spDXGIManager->ResetDevice(m_spDX11Device.Get(), resetToken)
+			);
+
+		// Create our event callback object.
+		spNotify = new MediaEngineNotify(m_window);
+		if (spNotify == nullptr)
+		{
+			MEDIA::ThrowIfFailed(E_OUTOFMEMORY);
+		}
+
+		spNotify->MediaEngineNotifyCallback(this);
+
+		// Create the class factory for the Media Engine.
+		MEDIA::ThrowIfFailed(
+			CoCreateInstance(CLSID_MFMediaEngineClassFactory, nullptr, CLSCTX_INPROC_SERVER, IID_PPV_ARGS(&spFactory))
+			);
+
+		// Set configuration attribiutes.
+		MEDIA::ThrowIfFailed(
+			MFCreateAttributes(&spAttributes, 1)
+			);
+
+		MEDIA::ThrowIfFailed(
+			spAttributes->SetUnknown(MF_MEDIA_ENGINE_DXGI_MANAGER, (IUnknown*)m_spDXGIManager.Get())
+			);
+
+		MEDIA::ThrowIfFailed(
+			spAttributes->SetUnknown(MF_MEDIA_ENGINE_CALLBACK, (IUnknown*)spNotify.Get())
+			);
+
+		MEDIA::ThrowIfFailed(
+			spAttributes->SetUINT32(MF_MEDIA_ENGINE_VIDEO_OUTPUT_FORMAT, m_d3dFormat)
+			);
+
+		// Create the Media Engine.
+		const DWORD flags = MF_MEDIA_ENGINE_WAITFORSTABLE_STATE;
+		MEDIA::ThrowIfFailed(
+			spFactory->CreateInstance(flags, spAttributes.Get(), &m_spMediaEngine)
+			);
+
+		MEDIA::ThrowIfFailed(
+			m_spMediaEngine.Get()->QueryInterface(__uuidof(IMFMediaEngine), (void**)&m_spEngineEx)
+			);
+
+		// Create/Update swap chain
+		UpdateForWindowSizeChange();
+
+		m_fInitSuccess = TRUE;
+
+	}
+	catch (Platform::Exception^)
+	{
+		CoreWindowDialog^ coreWindowDialog = ref new CoreWindowDialog(\
+			"Failed to initialize DirectX device.");
+		task<Windows::UI::Popups::IUICommand^> coreWindowDialogTask(coreWindowDialog->ShowAsync());
+
+		coreWindowDialogTask.then([this](Windows::UI::Popups::IUICommand^ uiCommand){
+			m_fExitApp = TRUE;
+		});
+	}
+
+	LeaveCriticalSection(&m_critSec);
+
+	return;
+}
+
+// Shut down the player and release all interface pointers.
+void FramePlayer::Shutdown()
+{
+	EnterCriticalSection(&m_critSec);
+
+	StopTimer();
+
+	if (m_spMediaEngine)
+	{
+		m_spMediaEngine->Shutdown();
+	}
+
+	if (nullptr != m_bstrURL)
+	{
+		::CoTaskMemFree(m_bstrURL);
+	}
+
+	LeaveCriticalSection(&m_critSec);
+
+	return;
+}
+
+// Open File
+void FramePlayer::OpenFile(Windows::Storage::StorageFile^ fileHandle)
+{
+	if (IsPlaying())
+	{
+		Pause();
+	}
+	if (m_fEOS)
+	{
+		StopTimer();
+	}
+
+	/*
+	FileOpenPicker^ getVidFile = ref new FileOpenPicker();
+
+	getVidFile->SuggestedStartLocation = PickerLocationId::VideosLibrary;
+	getVidFile->ViewMode = PickerViewMode::Thumbnail;
+
+	getVidFile->FileTypeFilter->Clear();
+	getVidFile->FileTypeFilter->Append(".mp4");
+	getVidFile->FileTypeFilter->Append(".m4v");
+	getVidFile->FileTypeFilter->Append(".mts");
+	getVidFile->FileTypeFilter->Append(".mov");
+	getVidFile->FileTypeFilter->Append(".wmv");
+	getVidFile->FileTypeFilter->Append(".wma");
+	getVidFile->FileTypeFilter->Append(".avi");
+	getVidFile->FileTypeFilter->Append(".wav");
+	getVidFile->FileTypeFilter->Append(".mp3");
+
+	m_pickFileTask = task<StorageFile^>(getVidFile->PickSingleFileAsync(), m_tcs.get_token());
+	*/
+	//m_pickFileTask.then([this](StorageFile^ fileHandle)
+	{
+		try
+		{
+			if (!fileHandle)
+			{
+				MEDIA::ThrowIfFailed(E_OUTOFMEMORY);
+			}
+
+			task<IRandomAccessStream^> fOpenStreamTask(fileHandle->OpenAsync(Windows::Storage::FileAccessMode::Read));
+
+			SetURL(fileHandle->Path);
+
+			auto vidPlayer = this;
+			fOpenStreamTask.then([vidPlayer](IRandomAccessStream^ streamHandle)
+			{
+				try
+				{
+					vidPlayer->SetBytestream(streamHandle);
+				}
+				catch (Platform::Exception^ e)
+				{
+					MEDIA::ThrowIfFailed(E_UNEXPECTED);
+				}
+			});
+
+		}
+		catch (Platform::Exception^ e) {}
+	};
+
+	return;
+}
+
+// Set a URL
+void FramePlayer::SetURL(Platform::String^ szURL)
+{
+	if (nullptr != m_bstrURL)
+	{
+		::CoTaskMemFree(m_bstrURL);
+		m_bstrURL = nullptr;
+	}
+
+	size_t cchAllocationSize = 1 + ::wcslen(szURL->Data());
+	m_bstrURL = (LPWSTR)::CoTaskMemAlloc(sizeof(WCHAR)*(cchAllocationSize));
+
+	if (m_bstrURL == 0)
+	{
+		MEDIA::ThrowIfFailed(E_OUTOFMEMORY);
+	}
+
+	StringCchCopyW(m_bstrURL, cchAllocationSize, szURL->Data());
+
+	return;
+}
+
+// Set Bytestream
+void FramePlayer::SetBytestream(IRandomAccessStream^ streamHandle)
+{
+	HRESULT hr = S_OK;
+	ComPtr<IMFByteStream> spMFByteStream = nullptr;
+
+	MEDIA::ThrowIfFailed(
+		MFCreateMFByteStreamOnStreamEx((IUnknown*)streamHandle, &spMFByteStream)
+		);
+
+	MEDIA::ThrowIfFailed(
+		m_spEngineEx->SetSourceFromByteStream(spMFByteStream.Get(), m_bstrURL)
+		);
+
+	return;
+}
+
+void FramePlayer::OnMediaEngineEvent(DWORD meEvent)
+{
+	switch (meEvent)
+	{
+	case MF_MEDIA_ENGINE_EVENT_LOADEDMETADATA:
+	{
+												 m_fEOS = FALSE;
+	}
+		break;
+	case MF_MEDIA_ENGINE_EVENT_CANPLAY:
+	{
+										  // Start the Playback
+										  Play();
+										  m_int = 0;
+										  m_VideoStart = 130;
+										  SetPlaybackPosition(m_VideoStart);
+										  StartTimer();
+	}
+		break;
+	case MF_MEDIA_ENGINE_EVENT_PLAY:
+		m_fPlaying = TRUE;
+		break;
+	case MF_MEDIA_ENGINE_EVENT_PAUSE:
+		m_fPlaying = FALSE;
+		break;
+	case MF_MEDIA_ENGINE_EVENT_ENDED:
+
+		if (m_spMediaEngine->HasVideo())
+		{
+			StopTimer();
+		}
+		m_fEOS = TRUE;
+		break;
+	case MF_MEDIA_ENGINE_EVENT_TIMEUPDATE:
+		break;
+	case MF_MEDIA_ENGINE_EVENT_ERROR:
+		break;
+	}
+
+	return;
+}
+
+// Start playback.
+void FramePlayer::Play()
+{
+	m_bEnd = false;
+
+	if (m_spMediaEngine)
+	{
+		//if (m_spMediaEngine->HasVideo() && m_fStopTimer)
+		{
+			// Start the Timer thread
+			StartTimer();
+		}
+
+		if (m_fEOS)
+		{
+			SetPlaybackPosition(0);
+			m_fPlaying = TRUE;
+		}
+		else
+		{
+			MEDIA::ThrowIfFailed(
+				m_spMediaEngine->Play()
+				);
+
+			MEDIA::ThrowIfFailed(
+				m_spMediaEngine->SetVolume(0.0)
+				);
+
+			/*
+			MEDIA::ThrowIfFailed(
+				m_spMediaEngine->SetPlaybackRate(8)
+				);
+			*/
+		}
+
+		m_fEOS = FALSE;
+	}
+	return;
+}
+
+// Pause playback.
+void FramePlayer::Pause()
+{
+	if (m_spMediaEngine)
+	{
+		MEDIA::ThrowIfFailed(
+			m_spMediaEngine->Pause()
+			);
+	}
+	return;
+}
+
+// Set the audio volume.
+void FramePlayer::SetVolume(float fVol)
+{
+	if (m_spMediaEngine)
+	{
+		MEDIA::ThrowIfFailed(
+			m_spMediaEngine->SetVolume(fVol)
+			);
+	}
+	return;
+}
+
+// Set the audio balance.
+void FramePlayer::SetBalance(float fBal)
+{
+	if (m_spEngineEx)
+	{
+		MEDIA::ThrowIfFailed(
+			m_spEngineEx->SetBalance(fBal)
+			);
+	}
+	return;
+}
+
+// Mute the audio.
+void FramePlayer::Mute(BOOL mute)
+{
+	if (m_spMediaEngine)
+	{
+		MEDIA::ThrowIfFailed(
+			m_spMediaEngine->SetMuted(mute)
+			);
+	}
+	return;
+}
+
+// Step forward one frame.
+void FramePlayer::FrameStep()
+{
+	if (m_spEngineEx)
+	{
+		MEDIA::ThrowIfFailed(
+			m_spEngineEx->FrameStep(TRUE)
+			);
+	}
+	return;
+}
+
+// Get the duration of the content.
+void FramePlayer::GetDuration(double *pDuration, BOOL *pbCanSeek)
+{
+	if (m_spMediaEngine)
+	{
+		double duration = m_spMediaEngine->GetDuration();
+
+		// NOTE:
+		// "duration != duration"
+		// This tests if duration is NaN, because NaN != NaN
+
+		if (duration != duration || duration == std::numeric_limits<float>::infinity())
+		{
+			*pDuration = 0;
+			*pbCanSeek = FALSE;
+		}
+		else
+		{
+			*pDuration = duration;
+
+			DWORD caps = 0;
+			m_spEngineEx->GetResourceCharacteristics(&caps);
+			*pbCanSeek = (caps & ME_CAN_SEEK) == ME_CAN_SEEK;
+		}
+	}
+	else
+	{
+		MEDIA::ThrowIfFailed(E_FAIL);
+	}
+
+	return;
+}
+
+// Get the current playback position.
+double FramePlayer::GetPlaybackPosition()
+{
+	if (m_spMediaEngine)
+	{
+		return m_spMediaEngine->GetCurrentTime();
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+// Seek to a new playback position.
+void FramePlayer::SetPlaybackPosition(float pos)
+{
+	if (m_spMediaEngine)
+	{
+		MEDIA::ThrowIfFailed(
+			m_spMediaEngine->SetCurrentTime(pos)
+			);
+	}
+}
+
+// Is the player in the middle of a seek operation?
+BOOL FramePlayer::IsSeeking()
+{
+	if (m_spMediaEngine)
+	{
+		return m_spMediaEngine->IsSeeking();
+	}
+	else
+	{
+		return FALSE;
+	}
+}
+
+void FramePlayer::EnableVideoEffect(BOOL enable)
+{
+	HRESULT hr = S_OK;
+
+	if (m_spEngineEx)
+	{
+		MEDIA::ThrowIfFailed(m_spEngineEx->RemoveAllEffects());
+		if (enable)
+		{
+			ComPtr<IMFActivate> spActivate;
+			LPCWSTR szActivatableClassId = WindowsGetStringRawBuffer((HSTRING)Windows::Media::VideoEffects::VideoStabilization->Data(), nullptr);
+
+			MEDIA::ThrowIfFailed(MFCreateMediaExtensionActivate(szActivatableClassId, nullptr, IID_PPV_ARGS(&spActivate)));
+
+			MEDIA::ThrowIfFailed(m_spEngineEx->InsertVideoEffect(spActivate.Get(), FALSE));
+		}
+	}
+
+	return;
+}
+
+// Window Event Handlers
+void FramePlayer::UpdateForWindowSizeChange()
+{
+	if ((m_window->Bounds.Width != m_rcTarget.right ||
+		m_window->Bounds.Height != m_rcTarget.bottom) ||
+		m_spDX11SwapChain == nullptr)
+	{
+		// Get the bounding rectangle of the window.    
+		m_rcTarget.left = 0;
+		m_rcTarget.top = 0;
+		m_rcTarget.right = 600; //(LONG)m_window->Bounds.Width;
+		m_rcTarget.bottom = 400; //(LONG)m_window->Bounds.Height;
+
+		if (m_spEngineEx)
+		{
+			CreateBackBuffers();
+		}
+	}
+
+	return;
+}
+
+//Timer related
+
+//+-----------------------------------------------------------------------------
+//
+//  Function:   StartTimer
+//
+//  Synopsis:   Our timer is based on the displays VBlank interval
+//
+//------------------------------------------------------------------------------
+void FramePlayer::StartTimer()
+{
+	ComPtr<IDXGIFactory1> spFactory;
+	MEDIA::ThrowIfFailed(
+		CreateDXGIFactory1(IID_PPV_ARGS(&spFactory))
+		);
+
+	ComPtr<IDXGIAdapter> spAdapter;
+	MEDIA::ThrowIfFailed(
+		spFactory->EnumAdapters(0, &spAdapter)
+		);
+
+	ComPtr<IDXGIOutput> spOutput;
+	MEDIA::ThrowIfFailed(
+		spAdapter->EnumOutputs(0, &m_spDXGIOutput)
+		);
+
+	m_fStopTimer = FALSE;
+
+	auto vidPlayer = this;
+	task<void> workItem(ThreadPool::RunAsync(ref new WorkItemHandler([=](IAsyncAction^ /*sender*/){
+		vidPlayer->RealVSyncTimer();
+	}
+	),
+		WorkItemPriority::High
+		));
+
+	return;
+}
+
+//+-----------------------------------------------------------------------------
+//
+//  Function:   StopTimer
+//
+//  Synopsis:   Stops the Timer and releases all its resources
+//
+//------------------------------------------------------------------------------
+void FramePlayer::StopTimer()
+{
+	m_fStopTimer = TRUE;
+	m_fPlaying = FALSE;
+
+	return;
+}
+
+//+-----------------------------------------------------------------------------
+//
+//  Function:   `SyncTimer
+//
+//  Synopsis:   A real VSyncTimer - a timer that fires at approx 60 Hz 
+//              synchronized with the display's real VBlank interrupt.
+//
+//------------------------------------------------------------------------------
+DWORD FramePlayer::RealVSyncTimer()
+{
+	for (;;)
+	{
+		if (m_fStopTimer)
+		{
+			//m_fStopTimer = false;
+			//Shutdown();
+			break;
+		}
+
+		if (SUCCEEDED(m_spDXGIOutput->WaitForVBlank()))
+		{
+			OnTimer();
+		}
+		else break;
+	}
+
+	return 0;
+}
+
+//+-----------------------------------------------------------------------------
+//
+//  Function:   OnTimer
+//
+//  Synopsis:   Called at 60Hz - we simply call the media engine and draw
+//              a new frame to the screen if told to do so.
+//
+//------------------------------------------------------------------------------
+void FramePlayer::OnTimer()
+{
+	EnterCriticalSection(&m_critSec);
+
+	if (m_spMediaEngine != nullptr)
+	{
+		LONGLONG pts;
+		HRESULT ready = m_spMediaEngine->OnVideoStreamTick(&pts);
+		if (ready == S_OK)
+		{
+			double currentTime = m_spMediaEngine->GetCurrentTime();
+			double startime = m_spMediaEngine->GetStartTime();
+			double duration = m_spMediaEngine->GetDuration();
+
+			if (currentTime - m_VideoStart > 5)
+			{
+				m_VideoLast = 0;
+				m_bEnd = true;
+			}
+			else
+			{
+				if (m_VideoLast == 0)
+				{
+					m_VideoLast = (float)currentTime;
+				}
+				else if (currentTime - m_VideoLast > 0.05)
+				{
+					m_VideoLast = (float)currentTime;
+
+					ComPtr<ID3D11Texture2D> spTextureDst;
+					MEDIA::ThrowIfFailed(m_spDX11SwapChain->GetBuffer(0, IID_PPV_ARGS(&spTextureDst)));
+
+					auto rcNormalized = MFVideoNormalizedRect();
+					rcNormalized.left = 0;
+					rcNormalized.right = 1;
+					rcNormalized.top = 0;
+					rcNormalized.bottom = 1;
+					MEDIA::ThrowIfFailed(m_spMediaEngine->TransferVideoFrame(spTextureDst.Get(), &rcNormalized, &m_rcTarget, &m_bkgColor));
+
+					// capture an image from the DX11 texture
+					DirectX::ScratchImage pImage;
+					HRESULT hr = DirectX::CaptureTexture(m_spDX11Device.Get(), m_spDX11DeviceContext.Get(), spTextureDst.Get(), pImage);
+
+					if (SUCCEEDED(hr))
+					{
+						// get the image object from the wrapper
+						const DirectX::Image *pRealImage = pImage.GetImage(0, 0, 0);
+
+						// set some place to save the image frame
+						StorageFolder ^dataFolder = ApplicationData::Current->LocalFolder;
+						m_int++;
+
+						wchar_t m_reportFileName[256];
+						swprintf_s(m_reportFileName, L"%d", m_int);
+
+						Platform::String ^ x = ref new Platform::String(m_reportFileName);
+
+						//m_spMediaEngine->Pause();
+						Platform::String ^szPath = dataFolder->Path + "\\" + m_hash + "\\" + x + ".png";
+						//m_spMediaEngine->Play();
+
+						// save the image to file
+						//m_spMediaEngine->Pause();
+						hr = DirectX::SaveToWICFile(*pRealImage, DirectX::WIC_FLAGS_NONE, GUID_ContainerFormatPng, szPath->Data());
+						//m_spMediaEngine->Play();
+						//m_spMediaEngine->SetPlaybackRate(2);
+					}
+
+					// and the present it to the screen
+					//MEDIA::ThrowIfFailed(m_spDX11SwapChain->Present(1, 0));
+				}
+				else
+				{
+					// do nothing
+				}
+			}
+		}
+	}
+
+	LeaveCriticalSection(&m_critSec);
+
+	if (m_bEnd)
+	{
+	    m_fStopTimer = true;
+	}
+
+	return;
+}
+
+//+-----------------------------------------------------------------------------
+//
+//  Function:   ExitApp
+//
+//  Synopsis:   Checks if there has been an error and indicates if the app
+//				should exit.
+//
+//------------------------------------------------------------------------------
+BOOL FramePlayer::ExitApp()
+{
+	return m_fExitApp;
+}

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MONEKYMEDIA</Machine>
+    <WindowsUser>aman</WindowsUser>
+    <SolutionConfiguration>Debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>Microsoft.SDKSamples.BasicMediaPlayback.CS</PackageIdentityName>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.exe">
+      <PackagePath>BasicMediaPlayback.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\AnimationLibrary\bin\x64\Debug\AnimationLibrary.winmd">
+      <PackagePath>AnimationLibrary.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\ApplicationConfiguration\bin\x64\Debug\ApplicationConfiguration.winmd">
+      <PackagePath>ApplicationConfiguration.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\x64\Debug\WindowsRuntimeComponent1\ImageProcessing.winmd">
+      <PackagePath>ImageProcessing.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\Logging\bin\x64\Debug\Logging.winmd">
+      <PackagePath>Logging.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\AnimationGenerator\bin\x64\Debug\AnimationGenerator.winmd">
+      <PackagePath>AnimationGenerator.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\GifMaker\bin\x64\Debug\GifMaker.winmd">
+      <PackagePath>GifMaker.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\packages\Caliburn.Micro.Core.2.0.0\lib\portable-net45+win8+wp8+wpa81\Caliburn.Micro.dll">
+      <PackagePath>Caliburn.Micro.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\packages\Caliburn.Micro.2.0.0\lib\win81\Caliburn.Micro.Extensions.dll">
+      <PackagePath>Caliburn.Micro.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\packages\Caliburn.Micro.2.0.0\lib\win81\Caliburn.Micro.Platform.dll">
+      <PackagePath>Caliburn.Micro.Platform.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\packages\Caliburn.Micro.2.0.0\lib\win81\Microsoft.Xaml.Interactions.dll">
+      <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\packages\Caliburn.Micro.2.0.0\lib\win81\Microsoft.Xaml.Interactivity.dll">
+      <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.dll">
+      <PackagePath>VideoFolders.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\AnimationLibrary\bin\x64\Debug\TCD.Serialization.dll">
+      <PackagePath>TCD.Serialization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\x64\Debug\WindowsRuntimeComponent1\ImageExtractor.dll">
+      <PackagePath>ImageExtractor.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\microsoft-sdk.png">
+      <PackagePath>Assets\microsoft-sdk.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\placeholder-sdk.png">
+      <PackagePath>Assets\placeholder-sdk.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\smallTile-sdk.png">
+      <PackagePath>Assets\smallTile-sdk.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\splash-sdk.png">
+      <PackagePath>Assets\splash-sdk.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\squareTile-sdk.png">
+      <PackagePath>Assets\squareTile-sdk.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\storeLogo-sdk.png">
+      <PackagePath>Assets\storeLogo-sdk.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\tile-sdk.png">
+      <PackagePath>Assets\tile-sdk.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\Assets\windows-sdk.png">
+      <PackagePath>Assets\windows-sdk.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\oceanogc0.png">
+      <PackagePath>oceanogc0.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\AnimationImage.xbf">
+      <PackagePath>AnimationImage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Controls\FilesControl.xbf">
+      <PackagePath>Controls\FilesControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Controls\FolderControl.xbf">
+      <PackagePath>Controls\FolderControl.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Common\StandardStyles.xbf">
+      <PackagePath>Common\StandardStyles.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\Sample-Utils\SampleTemplateStyles.xbf">
+      <PackagePath>Sample-Utils\SampleTemplateStyles.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aman\Desktop\BeautfulVideoPlayer\BeautfulVideoPlayer\VideoPlayer\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.12.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.12.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Debug</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Debug, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.12.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

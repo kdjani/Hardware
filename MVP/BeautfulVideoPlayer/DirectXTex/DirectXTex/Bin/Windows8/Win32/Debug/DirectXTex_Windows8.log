@@ -1,0 +1,52 @@
+﻿Build started 6/11/2014 8:14:32 PM.
+     1>Project "C:\Users\apervaiz\Downloads\DirectXTex\DirectXTex\DirectXTex_Windows8.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\apervaiz\Downloads\DirectXTex\DirectXTex\ /I"Generated Files\\" /IBin\Windows8\Win32\Debug\ /Zi /ZW /ZW:nostdlib /nologo /W4 /WX- /sdl /MP /Od /Oi /Oy- /D _UNICODE /D UNICODE /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /D WINAPI_FAMILY=WINAPI_FAMILY_APP /Gm- /EHsc /RTC1 /MDd /GS /Gy /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp /Yc"DirectXTexP.h" /Fp"Bin\Windows8\Win32\Debug\DirectXTex.pch" /Fo"Bin\Windows8\Win32\Debug\\" /Fd"Bin\Windows8\Win32\Debug\DirectXTex.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.VCLibs\11.0\References\CommonConfiguration\neutral\platform.winmd" /FU"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral\Windows.winmd" /FU"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral\Windows.winmd" /analyze- /errorReport:prompt  DirectXTexUtil.cpp
+         DirectXTexUtil.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\apervaiz\Downloads\DirectXTex\DirectXTex\ /I"Generated Files\\" /IBin\Windows8\Win32\Debug\ /Zi /ZW /ZW:nostdlib /nologo /W4 /WX- /sdl /MP /Od /Oi /Oy- /D _UNICODE /D UNICODE /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /D WINAPI_FAMILY=WINAPI_FAMILY_APP /Gm- /EHsc /RTC1 /MDd /GS /Gy /arch:SSE2 /fp:fast /Zc:wchar_t /Zc:forScope /openmp /Yu"DirectXTexP.h" /Fp"Bin\Windows8\Win32\Debug\DirectXTex.pch" /Fo"Bin\Windows8\Win32\Debug\\" /Fd"Bin\Windows8\Win32\Debug\DirectXTex.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.VCLibs\11.0\References\CommonConfiguration\neutral\platform.winmd" /FU"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral\Windows.winmd" /FU"C:\Program Files (x86)\Windows Kits\8.0\References\CommonConfiguration\Neutral\Windows.winmd" /analyze- /errorReport:prompt  BC.cpp BC4BC5.cpp BC6HBC7.cpp BCDirectCompute.cpp DirectXTexCompress.cpp DirectXTexCompressGPU.cpp DirectXTexConvert.cpp DirectXTexD3D11.cpp DirectXTexDDS.cpp DirectXTexFlipRotate.cpp DirectXTexImage.cpp DirectXTexMipMaps.cpp DirectXTexMisc.cpp DirectXTexNormalMaps.cpp DirectXTexPMAlpha.cpp DirectXTexResize.cpp DirectXTexTGA.cpp DirectXTexWIC.cpp
+         BC.cpp
+         BC4BC5.cpp
+         BC6HBC7.cpp
+         BCDirectCompute.cpp
+         DirectXTexCompress.cpp
+         DirectXTexCompressGPU.cpp
+         DirectXTexConvert.cpp
+         DirectXTexD3D11.cpp
+         DirectXTexDDS.cpp
+         DirectXTexFlipRotate.cpp
+         DirectXTexImage.cpp
+         DirectXTexMipMaps.cpp
+         DirectXTexMisc.cpp
+         DirectXTexNormalMaps.cpp
+         DirectXTexPMAlpha.cpp
+         DirectXTexResize.cpp
+         DirectXTexTGA.cpp
+         DirectXTexWIC.cpp
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\Lib.exe /OUT:"Bin\Windows8\Win32\Debug\DirectXTex.lib" /NOLOGO /IGNORE:4264 Bin\Windows8\Win32\Debug\BC.obj
+         Bin\Windows8\Win32\Debug\BC4BC5.obj
+         Bin\Windows8\Win32\Debug\BC6HBC7.obj
+         Bin\Windows8\Win32\Debug\BCDirectCompute.obj
+         Bin\Windows8\Win32\Debug\DirectXTexCompress.obj
+         Bin\Windows8\Win32\Debug\DirectXTexCompressGPU.obj
+         Bin\Windows8\Win32\Debug\DirectXTexConvert.obj
+         Bin\Windows8\Win32\Debug\DirectXTexD3D11.obj
+         Bin\Windows8\Win32\Debug\DirectXTexDDS.obj
+         Bin\Windows8\Win32\Debug\DirectXTexFlipRotate.obj
+         Bin\Windows8\Win32\Debug\DirectXTexImage.obj
+         Bin\Windows8\Win32\Debug\DirectXTexMipMaps.obj
+         Bin\Windows8\Win32\Debug\DirectXTexMisc.obj
+         Bin\Windows8\Win32\Debug\DirectXTexNormalMaps.obj
+         Bin\Windows8\Win32\Debug\DirectXTexPMAlpha.obj
+         Bin\Windows8\Win32\Debug\DirectXTexResize.obj
+         Bin\Windows8\Win32\Debug\DirectXTexTGA.obj
+         Bin\Windows8\Win32\Debug\DirectXTexUtil.obj
+         Bin\Windows8\Win32\Debug\DirectXTexWIC.obj
+         DirectXTex_Windows8.vcxproj -> C:\Users\apervaiz\Downloads\DirectXTex\DirectXTex\Bin\Windows8\Win32\Debug\DirectXTex.lib
+       _GenerateProjectPriFileCore:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x64\MakePri.exe New -ProjectRoot C:\Users\apervaiz\Downloads\DirectXTex\DirectXTex\ -ConfigXml Bin\Windows8\Win32\Debug\priconfig.xml -OutputFile C:\Users\apervaiz\Downloads\DirectXTex\DirectXTex\Bin\Windows8\Win32\Debug\DirectXTex.pri -IndexName DirectXTex -Verbose -Overwrite  
+     1>Done Building Project "C:\Users\apervaiz\Downloads\DirectXTex\DirectXTex\DirectXTex_Windows8.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.40

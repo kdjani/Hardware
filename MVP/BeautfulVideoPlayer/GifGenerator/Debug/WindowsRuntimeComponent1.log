@@ -1,0 +1,16 @@
+﻿Build started 6/14/2014 9:16:33 PM.
+     1>Project "C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\GifGenerator\ImageProcessing.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\Debug\ImageProcessing\ImageProcessing.dll" /INCREMENTAL /NOLOGO runtimeobject.lib uuid.lib d3d11.lib mf.lib mfplat.lib runtimeobject.lib d3d11.lib dxgi.lib kernel32.lib /MANIFEST:NO /DEBUG /PDB:"C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\Debug\ImageProcessing\ImageProcessing.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /APPCONTAINER /WINMD /WINMDFILE:"C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\Debug\ImageProcessing\ImageProcessing.winmd" /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /DLL Debug\FramePlayer.obj
+         Debug\pch.obj
+         Debug\Class1.obj
+         C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\DirectXTex\DirectXTex\Bin\Windows81\Win32\Debug\DirectXTex.lib
+            Creating library C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\Debug\ImageProcessing\ImageProcessing.lib and object C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\Debug\ImageProcessing\ImageProcessing.exp
+         ImageProcessing.vcxproj -> C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\Debug\ImageProcessing\ImageProcessing.dll
+       _GenerateProjectPriFileCore:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x64\MakePri.exe New -ProjectRoot C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\GifGenerator\ -ConfigXml Debug\priconfig.xml -OutputFile C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\Debug\ImageProcessing\ImageProcessing.pri -IndexName ImageProcessing -Verbose -Overwrite  
+     1>Done Building Project "C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\GifGenerator\ImageProcessing.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.81

@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="App4.Controls.FilesControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:App4.Controls"
+             xmlns:cmn="using:App4.Common"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="400">
+  <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+    <FlipView Grid.Column="1"
+              ItemsSource="{Binding Files}"
+              SelectedItem="{Binding SelectedFile,Mode=TwoWay}">
+      <FlipView.ItemTemplate>
+        <DataTemplate>
+          <Grid>
+            <Grid.Resources>
+              <cmn:ImageLoader x:Key="imageLoader"
+                               FileInformationSource="{Binding}" />
+            </Grid.Resources>
+            <StackPanel VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal">
+              <TextBlock Style="{StaticResource SubheaderTextStyle}"
+                         Text="resizing"
+                         VerticalAlignment="Center" />
+              <ProgressRing Margin="12,0,0,0"
+                            Width="24"
+                            Height="24"
+                            Foreground="White"
+                            IsActive="True"
+                            VerticalAlignment="Center" />
+            </StackPanel>
+            <Grid HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  DataContext="{StaticResource imageLoader}">
+              <Image Stretch="None"
+                     Source="{Binding Image}">
+              </Image>
+              <StackPanel HorizontalAlignment="Right"
+                          VerticalAlignment="Bottom"
+                          Visibility="{Binding HasLoaded, Converter={StaticResource boolToVisibilityConverter}}">
+                <TextBlock Text="{Binding FileInformationSource.Name}" />
+                <TextBlock Text="{Binding FileInformationSource.ImageProperties.CameraModel}" />
+                <TextBlock Text="{Binding FileInformationSource.ImageProperties.CameraManufacturer}" />
+                <TextBlock Text="{Binding FileInformationSource.ImageProperties.Height}" />
+                <TextBlock Text="{Binding FileInformationSource.ImageProperties.Width}" />
+                <TextBlock Text="{Binding FileInformationSource.ImageProperties.DateTaken, Converter={StaticResource dateTimeConverter}}" />
+              </StackPanel>
+            </Grid>
+          </Grid>
+        </DataTemplate>
+      </FlipView.ItemTemplate>
+    </FlipView>
+    <Button HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Command="{Binding BackCommand}"
+            Content="Back"
+            Style="{StaticResource BackButtonStyle}" />
+  </Grid>
+</UserControl>
+

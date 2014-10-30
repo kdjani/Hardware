@@ -1,0 +1,16 @@
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\bin\x86\Debug\VideoFolders.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\bin\x86\Debug\VideoFolders.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\bin\x86\Debug\AnimationLibrary.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\bin\x86\Debug\ApplicationConfiguration.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\bin\x86\Debug\ImageProcessing.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\bin\x86\Debug\TCD.Serialization.dll
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\bin\x86\Debug\AnimationLibrary.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\bin\x86\Debug\AnimationLibrary.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\bin\x86\Debug\ApplicationConfiguration.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\bin\x86\Debug\ApplicationConfiguration.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\bin\x86\Debug\ImageProcessing.pri
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\obj\x86\Debug\VideoFolders.csprojResolveAssemblyReference.cache
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\obj\x86\Debug\VideoFolders.winmd
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\obj\x86\Debug\VideoFolders.pdb
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\obj\x86\Debug\VideoFolders.winmdobj
+C:\Users\apervaiz\Desktop\1\BeautfulVideoPlayer\VideoFolders\obj\x86\Debug\VideoFolders.compile.pdb
