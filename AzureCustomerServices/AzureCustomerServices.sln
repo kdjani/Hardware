@@ -10,7 +10,7 @@ Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureCustomerServices", "Az
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerServicesWebRole", "CustomerServicesWebRole\CustomerServicesWebRole.csproj", "{2DF047B0-A919-4FB5-92AE-07CA52348074}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestService", "..\..\..\..\Downloads\TestService\TestService\TestService\TestService.csproj", "{2D3B6029-F679-4550-A271-717EE7AC1706}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestService", "TestService\TestService\TestService.csproj", "{2D3B6029-F679-4550-A271-717EE7AC1706}"
 	ProjectSection(ProjectDependencies) = postProject
 		{2DF047B0-A919-4FB5-92AE-07CA52348074} = {2DF047B0-A919-4FB5-92AE-07CA52348074}
 	EndProjectSection
