@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="AzureCustomerServices" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
+	<Role name="CustomerServicesWebRole">
+		<Instances count="1" />
+		<ConfigurationSettings>
+			<Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString"
+										 value="UseDevelopmentStorage=true" />
+			<Setting name="DataConnectionString" value="UseDevelopmentStorage=true" />
+			<Setting name="dbConnString" value="Server=localhost;Database=CodeCamp;Integrated Security=true;" />
+			<!-- This is the max number of times to try executing the database commands before giving up. -->
+			<Setting name="MaxTryCount" value="4" />
+			<!-- This is the time interval to sleep between SQL retries in case there's a problem. It's in ms. -->
+			<Setting name="RetrySleepInterval" value="2500" />
+			<!-- frequency, in seconds, to retrieve the perf counters -->
+			<Setting name="PerfMonSampleRate" value="60" />
+			<!-- frequency, in seconds, to transfer the perf counters to the logs from the system-->
+			<Setting name="PerfMonScheduledTransferPeriod" value="120" />
+			<Setting name="ProcessQueueName" value="codecampqueue" />
+		</ConfigurationSettings>
+	</Role>
+</ServiceConfiguration>

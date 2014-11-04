@@ -1,0 +1,116 @@
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\bin\Debug\ServiceConfiguration.cscfg
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\bin\Debug\ServiceDefinition.csdef
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\CustomerServicesWebRole.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\CustomerServicesWebRole.dll.config
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\CustomerServicesWebRole.pdb
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\de\Microsoft.Data.Edm.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\de\Microsoft.Data.OData.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\de\Microsoft.Data.Services.Client.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\de\System.Spatial.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\es\Microsoft.Data.Edm.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\es\Microsoft.Data.OData.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\es\Microsoft.Data.Services.Client.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\es\System.Spatial.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\fr\Microsoft.Data.Edm.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\fr\Microsoft.Data.OData.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\fr\Microsoft.Data.Services.Client.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\fr\System.Spatial.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\it\Microsoft.Data.Edm.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\it\Microsoft.Data.OData.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\it\Microsoft.Data.Services.Client.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\it\System.Spatial.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ja\Microsoft.Data.Edm.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ja\Microsoft.Data.OData.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ja\Microsoft.Data.Services.Client.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ja\System.Spatial.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ko\Microsoft.Data.Edm.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ko\Microsoft.Data.OData.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ko\Microsoft.Data.Services.Client.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ko\System.Spatial.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.Data.Edm.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.Data.Edm.xml
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.Data.OData.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.Data.OData.xml
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.Data.Services.Client.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.Data.Services.Client.xml
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Configuration.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Configuration.xml
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Diagnostics.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Diagnostics.StorageUtility.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Diagnostics.xml
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Storage.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Storage.xml
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Newtonsoft.Json.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Newtonsoft.Json.xml
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ru\Microsoft.Data.Edm.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ru\Microsoft.Data.OData.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ru\Microsoft.Data.Services.Client.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ru\System.Spatial.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\System.Spatial.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\System.Spatial.xml
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hans\System.Spatial.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+c:\users\apervaiz\documents\visual studio 2013\Projects\AzureCustomerServices\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\bin\Debug\ServiceConfiguration.cscfg
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\bin\Debug\ServiceDefinition.csdef
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\CustomerServicesWebRole.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\CustomerServicesWebRole.dll.config
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\CustomerServicesWebRole.pdb
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\de\Microsoft.Data.Services.Client.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\de\System.Spatial.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\es\Microsoft.Data.Services.Client.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\es\System.Spatial.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\fr\System.Spatial.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\it\Microsoft.Data.Services.Client.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\it\System.Spatial.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ja\System.Spatial.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ko\System.Spatial.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.Data.Edm.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.Data.Edm.xml
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.Data.OData.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.Data.OData.xml
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.Data.Services.Client.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.Data.Services.Client.xml
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Diagnostics.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Diagnostics.StorageUtility.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Diagnostics.xml
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Storage.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Microsoft.WindowsAzure.Storage.xml
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Newtonsoft.Json.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\Newtonsoft.Json.xml
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\ru\System.Spatial.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\System.Spatial.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\System.Spatial.xml
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\obj\Debug\CustomerServicesWebRole\bin\zh-Hant\System.Spatial.resources.dll
