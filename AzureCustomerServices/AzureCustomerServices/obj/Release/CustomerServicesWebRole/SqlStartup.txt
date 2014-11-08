@@ -1,0 +1,112 @@
+﻿USE [monkey2]
+GO
+
+/****** Object:  Table [dbo].[GpsData]    Script Date: 11/7/2014 6:27:19 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[GpsData](
+	[UserId] [uniqueidentifier] NOT NULL,
+	[DeviceId] [uniqueidentifier] NOT NULL,
+	[Time] [datetime] NOT NULL,
+	[Longitude] [nvarchar](50) NOT NULL,
+	[Latitude] [nvarchar](50) NOT NULL,
+	[Altitude] [nvarchar](50) NULL,
+ CONSTRAINT [PK_GpsData] PRIMARY KEY CLUSTERED 
+(
+	[UserId] ASC,
+	[DeviceId] ASC,
+	[Time] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON)
+)
+
+GO
+
+
+
+USE [monkey2]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GpsData_Add]    Script Date: 11/7/2014 6:27:49 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+CREATE Procedure [dbo].[GpsData_Add]
+	(
+	@UserId nvarchar(50),
+	@DeviceId nvarchar(50),
+	@Time nvarchar(50),
+	@Longitude nvarchar(50),
+	@Latitude nvarchar(50),
+	@Altitude nvarchar(50)
+	)
+AS 
+	INSERT INTO GpsData (UserId, DeviceId, Time, Longitude, Latitude, Altitude)
+	  VALUES (@UserId, @DeviceId, @Time, @Longitude, @Latitude, @Altitude)
+
+GO
+
+USE [monkey2]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GpsData_DeleteByIdAndTime]    Script Date: 11/7/2014 6:28:02 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+CREATE Procedure [dbo].[GpsData_DeleteByIdAndTime]
+	(
+	@UserId nvarchar(50),
+	@DeviceId nvarchar(50),
+	@StartTime nvarchar(50),
+	@EndTime nvarchar(50)
+	)
+AS 
+	DELETE FROM GpsData
+	WHERE UserId = @UserId and DeviceId = @DeviceId and Time >= @StartTime and Time <= @EndTime
+
+
+GO
+
+
+USE [monkey2]
+GO
+
+/****** Object:  StoredProcedure [dbo].[GpsData_GetByIdAndTime]    Script Date: 11/7/2014 6:29:23 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+CREATE Procedure [dbo].[GpsData_GetByIdAndTime]
+	(
+	@UserId nvarchar(50),
+	@DeviceId nvarchar(50),
+	@StartTime nvarchar(50),
+	@EndTime nvarchar(50)
+	)
+AS 
+	SELECT Time, Longitude, Latitude, Altitude
+	FROM GpsData
+	WHERE UserId = @UserId and DeviceId = @DeviceId and Time >= @StartTime and Time <= @EndTime
+
+
+GO
+
+
+

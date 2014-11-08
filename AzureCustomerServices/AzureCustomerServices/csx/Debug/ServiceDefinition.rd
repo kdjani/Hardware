@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AzureCustomerServices" generation="1" functional="0" release="0" Id="859e1c6a-9e4b-42b0-a855-799a2f507710" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AzureCustomerServices" generation="1" functional="0" release="0" Id="ece0e018-5eb2-4d2e-9feb-6445ed156e64" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="AzureCustomerServicesGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -112,7 +112,7 @@
       </maps>
       <components>
         <groupHascomponents>
-          <role name="CustomerServicesWebRole" generation="1" functional="0" release="0" software="C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\csx\Debug\roles\CustomerServicesWebRole" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="-1" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
+          <role name="CustomerServicesWebRole" generation="1" functional="0" release="0" software="C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\AzureCustomerServices\csx\Debug\roles\CustomerServicesWebRole" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="-1" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
               <inPort name="Endpoint" protocol="http" portRanges="80" />
             </componentports>
@@ -148,9 +148,9 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="a3cf5133-5bbc-47c5-af18-3dd1310f1945" ref="Microsoft.RedDog.Contract\ServiceContract\AzureCustomerServicesContract@ServiceDefinition">
+    <implementation Id="82038b2b-57c4-404b-8418-f9706dd31395" ref="Microsoft.RedDog.Contract\ServiceContract\AzureCustomerServicesContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="ab125a04-5e7a-43d6-93fe-91e7caafd06b" ref="Microsoft.RedDog.Contract\Interface\CustomerServicesWebRole:Endpoint@ServiceDefinition">
+        <interfaceReference Id="a64a05de-1008-4558-807c-5ce060bb6a98" ref="Microsoft.RedDog.Contract\Interface\CustomerServicesWebRole:Endpoint@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole:Endpoint" />
           </inPort>

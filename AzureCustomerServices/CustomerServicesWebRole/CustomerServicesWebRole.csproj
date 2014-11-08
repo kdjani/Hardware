@@ -112,6 +112,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SqlStartup.txt" />
     <Content Include="Web.config" />
     <Content Include="app.config" />
     <None Include="Properties\PublishProfiles\gpslogger.pubxml" />

@@ -31,9 +31,9 @@ namespace CustomerServicesWebRole
 		string AddGpsData(string userId, string deviceId, string time, string longitude, string latitude, string altitude);
 
 		[OperationContract]
-		string GetGpsData(string userId, string deviceId, string time, out DataSet gpsData);
+		string GetGpsData(string userId, string deviceId, string startTime, string endTime, out DataSet gpsData);
 
 		[OperationContract]
-		string DeleteGpsData(string userId, string deviceId, string time);
+        string DeleteGpsData(string userId, string deviceId, string startTime, string endTime);
 	}
 }

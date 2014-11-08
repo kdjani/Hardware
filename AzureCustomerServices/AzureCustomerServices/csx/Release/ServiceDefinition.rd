@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AzureCustomerServices" generation="1" functional="0" release="0" Id="93d71732-73dd-4919-b368-f2bddd60d739" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AzureCustomerServices" generation="1" functional="0" release="0" Id="d3f01565-34d5-4138-a9f5-44ddb1d1ac93" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="AzureCustomerServicesGroup" generation="1" functional="0" release="0">
       <componentports>
-        <inPort name="CustomerServicesWebRole:Endpoint1" protocol="http">
+        <inPort name="CustomerServicesWebRole:Endpoint" protocol="http">
           <inToChannel>
-            <lBChannelMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/LB:CustomerServicesWebRole:Endpoint1" />
+            <lBChannelMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/LB:CustomerServicesWebRole:Endpoint" />
           </inToChannel>
         </inPort>
       </componentports>
@@ -57,9 +57,9 @@
         </aCS>
       </settings>
       <channels>
-        <lBChannel name="LB:CustomerServicesWebRole:Endpoint1">
+        <lBChannel name="LB:CustomerServicesWebRole:Endpoint">
           <toPorts>
-            <inPortMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Endpoint1" />
+            <inPortMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Endpoint" />
           </toPorts>
         </lBChannel>
       </channels>
@@ -112,9 +112,9 @@
       </maps>
       <components>
         <groupHascomponents>
-          <role name="CustomerServicesWebRole" generation="1" functional="0" release="0" software="C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\csx\Release\roles\CustomerServicesWebRole" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="-1" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
+          <role name="CustomerServicesWebRole" generation="1" functional="0" release="0" software="C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\AzureCustomerServices\csx\Release\roles\CustomerServicesWebRole" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="-1" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
-              <inPort name="Endpoint1" protocol="http" portRanges="80" />
+              <inPort name="Endpoint" protocol="http" portRanges="80" />
             </componentports>
             <settings>
               <aCS name="DataConnectionString" defaultValue="" />
@@ -125,7 +125,7 @@
               <aCS name="PerfMonScheduledTransferPeriod" defaultValue="" />
               <aCS name="ProcessQueueName" defaultValue="" />
               <aCS name="RetrySleepInterval" defaultValue="" />
-              <aCS name="__ModelData" defaultValue="&lt;m role=&quot;CustomerServicesWebRole&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;CustomerServicesWebRole&quot;&gt;&lt;e name=&quot;Endpoint1&quot; /&gt;&lt;/r&gt;&lt;/m&gt;" />
+              <aCS name="__ModelData" defaultValue="&lt;m role=&quot;CustomerServicesWebRole&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;CustomerServicesWebRole&quot;&gt;&lt;e name=&quot;Endpoint&quot; /&gt;&lt;/r&gt;&lt;/m&gt;" />
             </settings>
             <resourcereferences>
               <resourceReference name="CustomerServicesWebRole.svclog" defaultAmount="[1000,1000,1000]" defaultSticky="true" kind="Directory" />
@@ -148,11 +148,11 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="b4376e60-b662-43d8-8d40-e1b67c92c5c4" ref="Microsoft.RedDog.Contract\ServiceContract\AzureCustomerServicesContract@ServiceDefinition">
+    <implementation Id="d2b0714a-e173-4046-9d9e-8ce58be01a38" ref="Microsoft.RedDog.Contract\ServiceContract\AzureCustomerServicesContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="b550ac9d-0d05-4ca2-9ba5-71dd0c33161c" ref="Microsoft.RedDog.Contract\Interface\CustomerServicesWebRole:Endpoint1@ServiceDefinition">
+        <interfaceReference Id="3647ed9c-8ab6-43a7-b5bf-398a5393c0de" ref="Microsoft.RedDog.Contract\Interface\CustomerServicesWebRole:Endpoint@ServiceDefinition">
           <inPort>
-            <inPortMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole:Endpoint1" />
+            <inPortMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole:Endpoint" />
           </inPort>
         </interfaceReference>
       </interfacereferences>

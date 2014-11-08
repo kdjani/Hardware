@@ -100,7 +100,8 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="deviceId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="time" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -129,7 +130,8 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="deviceId" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="time" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="endTime" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

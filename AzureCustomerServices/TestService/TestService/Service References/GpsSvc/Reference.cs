@@ -31,10 +31,10 @@ namespace TestService.GpsSvc {
         string AddGpsData(string userId, string deviceId, string time, string longitude, string latitude, string altitude);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerServices/GetGpsData", ReplyAction="http://tempuri.org/ICustomerServices/GetGpsDataResponse")]
-        string GetGpsData(out System.Data.DataSet gpsData, string userId, string deviceId, string time);
+        string GetGpsData(out System.Data.DataSet gpsData, string userId, string deviceId, string startTime, string endTime);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICustomerServices/DeleteGpsData", ReplyAction="http://tempuri.org/ICustomerServices/DeleteGpsDataResponse")]
-        string DeleteGpsData(string userId, string deviceId, string time);
+        string DeleteGpsData(string userId, string deviceId, string startTime, string endTime);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -84,12 +84,12 @@ namespace TestService.GpsSvc {
             return base.Channel.AddGpsData(userId, deviceId, time, longitude, latitude, altitude);
         }
         
-        public string GetGpsData(out System.Data.DataSet gpsData, string userId, string deviceId, string time) {
-            return base.Channel.GetGpsData(out gpsData, userId, deviceId, time);
+        public string GetGpsData(out System.Data.DataSet gpsData, string userId, string deviceId, string startTime, string endTime) {
+            return base.Channel.GetGpsData(out gpsData, userId, deviceId, startTime, endTime);
         }
         
-        public string DeleteGpsData(string userId, string deviceId, string time) {
-            return base.Channel.DeleteGpsData(userId, deviceId, time);
+        public string DeleteGpsData(string userId, string deviceId, string startTime, string endTime) {
+            return base.Channel.DeleteGpsData(userId, deviceId, startTime, endTime);
         }
     }
 }

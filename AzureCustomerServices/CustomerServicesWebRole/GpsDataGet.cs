@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using Microsoft.WindowsAzure.ServiceRuntime;
 using System.Data;
 using System.Threading;
+using System.Globalization;
 
 namespace CustomerServicesWebRole
 {
@@ -16,13 +17,21 @@ namespace CustomerServicesWebRole
 		/// <summary>
 		/// Given the first and last name, return the favorite movie and language.
 		/// </summary>
-		internal string GetGpsData(string userId, string deviceId, string time, out DataSet gpsData)
+		internal string GetGpsData(string userId, string deviceId, string startTime, string endTime, out DataSet gpsData)
 		{
 			//write to diagnostics that this routine was called, along with the calling parameters.
-			Trace.TraceInformation("[GetGpsData] called. UserId = {0}, DeviceId = {1}, Time = {2}",
-			  userId, deviceId, time);
+            Trace.TraceInformation("[GetGpsData] called. UserId = {0}, DeviceId = {1}, StartTime = {2}, EndTime = {3}",
+			  userId, deviceId, startTime, endTime);
 			string errorMessage = string.Empty;
 			gpsData = new DataSet();
+
+            DateTime startTimeSql = DateTime.ParseExact(startTime, "ddMMyyHHmmss", CultureInfo.InvariantCulture);
+            startTime = startTimeSql.Date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+            startTime = string.Format("{0} {1}:{2}:{3}", startTime, startTimeSql.Hour, startTimeSql.Minute, startTimeSql.Second);
+
+            DateTime endTimeSql = DateTime.ParseExact(endTime, "ddMMyyHHmmss", CultureInfo.InvariantCulture);
+            endTime = endTimeSql.Date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+            endTime = string.Format("{0} {1}:{2}:{3}", endTime, endTimeSql.Hour, endTimeSql.Minute, endTimeSql.Second);
 
 			//tryCount is the number of times to retry if the SQL execution or connection fails.
 			//This is compared against tryMax, which is in the configuration 
@@ -74,10 +83,15 @@ namespace CustomerServicesWebRole
 								prm.Value = deviceId;
 								cmd.Parameters.Add(prm);
 
-								prm = new SqlParameter("@Time", SqlDbType.NVarChar, 50);
+								prm = new SqlParameter("@StartTime", SqlDbType.NVarChar, 50);
 								prm.Direction = ParameterDirection.Input;
-								prm.Value = time;
+								prm.Value = startTime;
 								cmd.Parameters.Add(prm);
+
+                                prm = new SqlParameter("@EndTime", SqlDbType.NVarChar, 50);
+                                prm.Direction = ParameterDirection.Input;
+                                prm.Value = endTime;
+                                cmd.Parameters.Add(prm);
 
 								SqlDataAdapter da = new SqlDataAdapter(cmd);
 								DataTable dt = new DataTable();

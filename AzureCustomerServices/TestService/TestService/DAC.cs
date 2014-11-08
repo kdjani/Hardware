@@ -8,8 +8,8 @@ namespace TestService
 {
     public static class DAC
     {
-		//private static string m_endpointAddress = @"http://gpslogger.cloudapp.net/CustomerServices.svc";
-		private static string m_endpointAddress = @"http://localhost:25670/CustomerServices.svc";
+		private static string m_endpointAddress = @"http://gpslogger.cloudapp.net/CustomerServices.svc";
+		//private static string m_endpointAddress = @"http://localhost:25670/CustomerServices.svc";
 
 		private static GpsSvc.CustomerServicesClient getClient()
 		{
@@ -27,16 +27,16 @@ namespace TestService
 			return prx.AddGpsData(userId, deviceId, time, longitude, latitude, altitude);
 		}
 
-		internal static string GetGpsData(string userId, string deviceId, string time, out DataSet gpsData)
+        internal static string GetGpsData(string userId, string deviceId, string startTime, string endTime, out DataSet gpsData)
 		{
 			GpsSvc.CustomerServicesClient prx = getClient();
-		    return prx.GetGpsData(out gpsData, userId, deviceId, time);
+		    return prx.GetGpsData(out gpsData, userId, deviceId, startTime, endTime);
 		}
 
-		internal static string DeleteGpsData(string userId, string deviceId, string time)
+        internal static string DeleteGpsData(string userId, string deviceId, string startTime, string endTime)
 		{
 			GpsSvc.CustomerServicesClient prx = getClient();
-			return prx.DeleteGpsData(userId, deviceId, time);
+			return prx.DeleteGpsData(userId, deviceId, startTime, endTime);
 		}
     }
 }

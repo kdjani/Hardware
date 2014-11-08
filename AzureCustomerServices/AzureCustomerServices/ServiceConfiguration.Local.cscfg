@@ -6,7 +6,14 @@
 			<Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString"
 										 value="UseDevelopmentStorage=true" />
 			<Setting name="DataConnectionString" value="UseDevelopmentStorage=true" />
-			<Setting name="dbConnString" value="Server=localhost;Database=CodeCamp;Integrated Security=true;" />
+			
+      <!--<Setting name="dbConnString" value="Server=localhost;Database=CodeCamp;Integrated Security=true;" />-->
+
+      <Setting name="dbConnString" value="Server=tcp:nroclmnglj.database.windows.net;
+               Database=monkey2;User ID=contactmanageradmin@nroclmnglj;Password=&amp;mazlnsxkH232;
+               Trusted_Connection=False;Encrypt=True;" />
+      
+      
 			<!-- This is the max number of times to try executing the database commands before giving up. -->
 			<Setting name="MaxTryCount" value="4" />
 			<!-- This is the time interval to sleep between SQL retries in case there's a problem. It's in ms. -->

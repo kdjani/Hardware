@@ -7,15 +7,24 @@ using System.Diagnostics;
 using System.Data.SqlClient;
 using System.Data;
 using System.Threading;
+using System.Globalization;
 
 namespace CustomerServicesWebRole
 {
 	internal class GpsDataDelete
     {
-		internal string DeleteGpsData(string userId, string deviceId, string time)
+        internal string DeleteGpsData(string userId, string deviceId, string startTime, string endTime)
         {
-			Trace.TraceInformation("[DeleteGpsData] called. UserId = {0}, DeviceId = {1}, Time = {2}",
-				userId, deviceId, time);
+            Trace.TraceInformation("[DeleteGpsData] called. UserId = {0}, DeviceId = {1}, StartTime = {2}, EndTime = {3}",
+                userId, deviceId, startTime, endTime);
+
+            DateTime startTimeSql = DateTime.ParseExact(startTime, "ddMMyyHHmmss", CultureInfo.InvariantCulture);
+            startTime = startTimeSql.Date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+            startTime = string.Format("{0} {1}:{2}:{3}", startTime, startTimeSql.Hour, startTimeSql.Minute, startTimeSql.Second);
+
+            DateTime endTimeSql = DateTime.ParseExact(endTime, "ddMMyyHHmmss", CultureInfo.InvariantCulture);
+            endTime = endTimeSql.Date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+            endTime = string.Format("{0} {1}:{2}:{3}", endTime, endTimeSql.Hour, endTimeSql.Minute, endTimeSql.Second);
 
             string errorMessage = string.Empty;
 
@@ -48,10 +57,15 @@ namespace CustomerServicesWebRole
 								prm.Value = deviceId;
                                 cmd.Parameters.Add(prm);
 
-								prm = new SqlParameter("@Time", SqlDbType.NVarChar, 50);
+                                prm = new SqlParameter("@StartTime", SqlDbType.NVarChar, 50);
                                 prm.Direction = ParameterDirection.Input;
-								prm.Value = time;
-								cmd.Parameters.Add(prm);
+                                prm.Value = startTime;
+                                cmd.Parameters.Add(prm);
+
+                                prm = new SqlParameter("@EndTime", SqlDbType.NVarChar, 50);
+                                prm.Direction = ParameterDirection.Input;
+                                prm.Value = endTime;
+                                cmd.Parameters.Add(prm);
 
                                 cmd.ExecuteScalar();
                                 success = true;

@@ -59,19 +59,19 @@ namespace CustomerServicesWebRole
 			return errorMessage;
 		}
 
-		public string GetGpsData(string userId, string deviceId, string time, out DataSet gpsData)
+        public string GetGpsData(string userId, string deviceId, string startTime, string endTime, out DataSet gpsData)
 		{
 			string errorMessage = string.Empty;
 			GpsDataGet cfa = new GpsDataGet();
-			errorMessage = cfa.GetGpsData(userId, deviceId, time, out gpsData);
+            errorMessage = cfa.GetGpsData(userId, deviceId, startTime, endTime, out gpsData);
 			return errorMessage;
 		}
 
-		public string DeleteGpsData(string userId, string deviceId, string time)
+        public string DeleteGpsData(string userId, string deviceId, string startTime, string endTime)
 		{
 			string errorMessage = string.Empty;
 			GpsDataDelete cfa = new GpsDataDelete();
-			errorMessage = cfa.DeleteGpsData(userId, deviceId, time);
+            errorMessage = cfa.DeleteGpsData(userId, deviceId, startTime, endTime);
 			return errorMessage;
 		}
 	}

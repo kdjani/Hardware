@@ -10,3 +10,9 @@ C:\Users\apervaiz\Downloads\TestService\TestService\TestService\obj\x86\Debug\Te
 C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\TestService\TestService\bin\Debug\TestService.exe.config
 C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\TestService\TestService\obj\x86\Debug\TestService.exe
 C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\TestService\TestService\obj\x86\Debug\TestService.pdb
+C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\TestService\TestService\bin\Debug\TestService.exe
+C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\TestService\TestService\bin\Debug\TestService.pdb
+C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\TestService\TestService\obj\x86\Debug\TestService.MainForm.resources
+C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\TestService\TestService\obj\x86\Debug\TestService.Properties.Resources.resources
+C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\TestService\TestService\obj\x86\Debug\TestService.csproj.GenerateResource.Cache
+C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\TestService\TestService\obj\x86\Debug\TestService.csprojResolveAssemblyReference.cache

@@ -37,7 +37,7 @@
     </ConfigurationSettings>
     <Contents>
       <Content destination=".\">
-        <SourceDirectory path="C:\Users\apervaiz\Documents\Visual Studio 2013\Projects\AzureCustomerServices 2\AzureCustomerServices\rcf\Debug\CustomerServicesWebRoleContent\" />
+        <SourceDirectory path="C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\AzureCustomerServices\rcf\Debug\CustomerServicesWebRoleContent\" />
       </Content>
     </Contents>
   </WebRole>

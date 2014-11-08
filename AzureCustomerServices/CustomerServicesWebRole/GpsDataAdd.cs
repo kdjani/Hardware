@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Data.SqlClient;
 using System.Data;
 using System.Threading;
+using System.Globalization;
 
 namespace CustomerServicesWebRole
 {
@@ -17,6 +18,10 @@ namespace CustomerServicesWebRole
         {
 			Trace.TraceInformation("[AddGpsData] called. UserId = {0}, DeviceId = {1}, Time = {2}, Longitude = {3}, Latitude = {4}, Altitude = {5}",
 				userId, deviceId, time, longitude, latitude, altitude);
+
+            DateTime startTime =  DateTime.ParseExact(time, "ddMMyyHHmmss", CultureInfo.InvariantCulture);
+            time = startTime.Date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+            time = string.Format("{0} {1}:{2}:{3}", time, startTime.Hour, startTime.Minute, startTime.Second);
 
             string errorMessage = string.Empty;
 
@@ -35,7 +40,7 @@ namespace CustomerServicesWebRole
                         using (SqlConnection cnx = new SqlConnection(GlobalStaticProperties.dbConnectionString))
                         {
                             cnx.Open();
-							using (SqlCommand cmd = new SqlCommand("GpsData_Add", cnx))
+							using (SqlCommand cmd = new SqlCommand("dbo.GpsData_Add", cnx))
                             {
                                 cmd.CommandType = CommandType.StoredProcedure;
 
