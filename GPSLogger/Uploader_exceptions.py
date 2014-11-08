@@ -1,8 +1,10 @@
 #Change for arduino
 import urllib
+import httplib
 #Change for VS
 #import urllib.request
 #import urllib.parse
+#import http.client
 #Change
 import datetime
 import os
@@ -27,11 +29,12 @@ ADD_TEMPLATE = """<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/
 
 headers = {
     'Content-Type': 'text/xml; charset=utf-8',
-	'SOAPAction': '"http://tempuri.org/ICustomerServices/AddGpsData"',
-	'Accept-Encoding': 'gzip, deflate'
+    'SOAPAction': '"http://tempuri.org/ICustomerServices/AddGpsData"',
+    'Accept-Encoding': 'gzip, deflate'
     }
 
 site = "http://gpslogger.cloudapp.net/CustomerServices.svc"
+url = "gpslogger.cloudapp.net"
 userId = "75c022a7-757c-4fc9-9809-27092d4f4aef"
 deviceId = "32e4a2b6-ec8a-4bf7-adee-d40759e818b5"
 
@@ -152,15 +155,19 @@ try:
 							data = ADD_TEMPLATE.format(userId, deviceId, startTime, longitudeStr, latitudeStr, altitude)
 							binary_data = data.encode('utf8')
 							writeLog(logFile, "data: " + str(data))
-
+							
 							#Change
 							#Change for arduino
-							req = urllib.Request(site, binary_data, headers)
-							f = urllib.urlopen(req)
+							conn = httplib.HTTPConnection(url)
 							#Change for VS
-							#req = urllib.request.Request(site, binary_data, headers)
-							#f = urllib.request.urlopen(req)
+							#conn = http.client.HTTPConnection(url)
 							#Change
+							
+							conn.request("POST", "/CustomerServices.svc", binary_data, headers)
+							f = conn.getresponse()
+
+							writeLog(logFile, f.status)
+							writeLog(logFile, f.reason)
 							writeLog(logFile, f.read())
 							writeLog(logFile, "Sent data up...")
 							iterator = 0
