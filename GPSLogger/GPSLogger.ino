@@ -66,7 +66,8 @@ void setup() {
   Serial.println("Get version!");
   
 
-   GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_RMCGGA);
+   //GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_RMCGGA);
+   GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_ALLDATA);
    GPS.sendCommand(PMTK_SET_NMEA_UPDATE_1HZ);
    GPS.sendCommand(PGCMD_NOANTENNA);
 
