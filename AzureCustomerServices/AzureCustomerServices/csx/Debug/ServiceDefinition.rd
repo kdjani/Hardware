@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AzureCustomerServices" generation="1" functional="0" release="0" Id="ece0e018-5eb2-4d2e-9feb-6445ed156e64" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
+<serviceModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AzureCustomerServices" generation="1" functional="0" release="0" Id="a2a95ac9-5692-462d-acd2-767adcc4db7c" dslVersion="1.2.0.0" xmlns="http://schemas.microsoft.com/dsltools/RDSM">
   <groups>
     <group name="AzureCustomerServicesGroup" generation="1" functional="0" release="0">
       <componentports>
@@ -8,8 +8,18 @@
             <lBChannelMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/LB:CustomerServicesWebRole:Endpoint" />
           </inToChannel>
         </inPort>
+        <inPort name="CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" protocol="tcp">
+          <inToChannel>
+            <lBChannelMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/LB:CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" />
+          </inToChannel>
+        </inPort>
       </componentports>
       <settings>
+        <aCS name="Certificate|CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" defaultValue="">
+          <maps>
+            <mapMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/MapCertificate|CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" />
+          </maps>
+        </aCS>
         <aCS name="CustomerServicesWebRole:DataConnectionString" defaultValue="">
           <maps>
             <mapMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/MapCustomerServicesWebRole:DataConnectionString" />
@@ -28,6 +38,31 @@
         <aCS name="CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="">
           <maps>
             <mapMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/MapCustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+          </maps>
+        </aCS>
+        <aCS name="CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" defaultValue="">
+          <maps>
+            <mapMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/MapCustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" />
+          </maps>
+        </aCS>
+        <aCS name="CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" defaultValue="">
+          <maps>
+            <mapMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/MapCustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" />
+          </maps>
+        </aCS>
+        <aCS name="CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" defaultValue="">
+          <maps>
+            <mapMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/MapCustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" />
+          </maps>
+        </aCS>
+        <aCS name="CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" defaultValue="">
+          <maps>
+            <mapMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/MapCustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" />
+          </maps>
+        </aCS>
+        <aCS name="CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" defaultValue="">
+          <maps>
+            <mapMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/MapCustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" />
           </maps>
         </aCS>
         <aCS name="CustomerServicesWebRole:PerfMonSampleRate" defaultValue="">
@@ -62,8 +97,23 @@
             <inPortMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Endpoint" />
           </toPorts>
         </lBChannel>
+        <lBChannel name="LB:CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput">
+          <toPorts>
+            <inPortMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" />
+          </toPorts>
+        </lBChannel>
+        <sFSwitchChannel name="SW:CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp">
+          <toPorts>
+            <inPortMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp" />
+          </toPorts>
+        </sFSwitchChannel>
       </channels>
       <maps>
+        <map name="MapCertificate|CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" kind="Identity">
+          <certificate>
+            <certificateMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" />
+          </certificate>
+        </map>
         <map name="MapCustomerServicesWebRole:DataConnectionString" kind="Identity">
           <setting>
             <aCSMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/DataConnectionString" />
@@ -82,6 +132,31 @@
         <map name="MapCustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" kind="Identity">
           <setting>
             <aCSMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+          </setting>
+        </map>
+        <map name="MapCustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" kind="Identity">
+          <setting>
+            <aCSMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" />
+          </setting>
+        </map>
+        <map name="MapCustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" kind="Identity">
+          <setting>
+            <aCSMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" />
+          </setting>
+        </map>
+        <map name="MapCustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" kind="Identity">
+          <setting>
+            <aCSMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" />
+          </setting>
+        </map>
+        <map name="MapCustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" kind="Identity">
+          <setting>
+            <aCSMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" />
+          </setting>
+        </map>
+        <map name="MapCustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" kind="Identity">
+          <setting>
+            <aCSMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" />
           </setting>
         </map>
         <map name="MapCustomerServicesWebRole:PerfMonSampleRate" kind="Identity">
@@ -115,23 +190,45 @@
           <role name="CustomerServicesWebRole" generation="1" functional="0" release="0" software="C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\AzureCustomerServices\csx\Debug\roles\CustomerServicesWebRole" entryPoint="base\x64\WaHostBootstrapper.exe" parameters="base\x64\WaIISHost.exe " memIndex="-1" hostingEnvironment="frontendadmin" hostingEnvironmentVersion="2">
             <componentports>
               <inPort name="Endpoint" protocol="http" portRanges="80" />
+              <inPort name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" protocol="tcp" />
+              <inPort name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp" protocol="tcp" portRanges="3389" />
+              <outPort name="CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp" protocol="tcp">
+                <outToChannel>
+                  <sFSwitchChannelMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/SW:CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp" />
+                </outToChannel>
+              </outPort>
             </componentports>
             <settings>
               <aCS name="DataConnectionString" defaultValue="" />
               <aCS name="dbConnString" defaultValue="" />
               <aCS name="MaxTryCount" defaultValue="" />
               <aCS name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" defaultValue="" />
+              <aCS name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" defaultValue="" />
+              <aCS name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" defaultValue="" />
+              <aCS name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" defaultValue="" />
+              <aCS name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" defaultValue="" />
+              <aCS name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" defaultValue="" />
               <aCS name="PerfMonSampleRate" defaultValue="" />
               <aCS name="PerfMonScheduledTransferPeriod" defaultValue="" />
               <aCS name="ProcessQueueName" defaultValue="" />
               <aCS name="RetrySleepInterval" defaultValue="" />
-              <aCS name="__ModelData" defaultValue="&lt;m role=&quot;CustomerServicesWebRole&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;CustomerServicesWebRole&quot;&gt;&lt;e name=&quot;Endpoint&quot; /&gt;&lt;/r&gt;&lt;/m&gt;" />
+              <aCS name="__ModelData" defaultValue="&lt;m role=&quot;CustomerServicesWebRole&quot; xmlns=&quot;urn:azure:m:v1&quot;&gt;&lt;r name=&quot;CustomerServicesWebRole&quot;&gt;&lt;e name=&quot;Endpoint&quot; /&gt;&lt;e name=&quot;Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp&quot; /&gt;&lt;e name=&quot;Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput&quot; /&gt;&lt;/r&gt;&lt;/m&gt;" />
             </settings>
             <resourcereferences>
               <resourceReference name="CustomerServicesWebRole.svclog" defaultAmount="[1000,1000,1000]" defaultSticky="true" kind="Directory" />
               <resourceReference name="DiagnosticStore" defaultAmount="[4096,4096,4096]" defaultSticky="true" kind="Directory" />
               <resourceReference name="EventStore" defaultAmount="[1000,1000,1000]" defaultSticky="false" kind="LogStore" />
             </resourcereferences>
+            <storedcertificates>
+              <storedCertificate name="Stored0Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" certificateStore="My" certificateLocation="System">
+                <certificate>
+                  <certificateMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole/Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" />
+                </certificate>
+              </storedCertificate>
+            </storedcertificates>
+            <certificates>
+              <certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" />
+            </certificates>
           </role>
           <sCSPolicy>
             <sCSPolicyIDMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRoleInstances" />
@@ -148,11 +245,16 @@
     </group>
   </groups>
   <implements>
-    <implementation Id="82038b2b-57c4-404b-8418-f9706dd31395" ref="Microsoft.RedDog.Contract\ServiceContract\AzureCustomerServicesContract@ServiceDefinition">
+    <implementation Id="8fa1e649-f09a-4c75-aadb-33a8f3edb8b5" ref="Microsoft.RedDog.Contract\ServiceContract\AzureCustomerServicesContract@ServiceDefinition">
       <interfacereferences>
-        <interfaceReference Id="a64a05de-1008-4558-807c-5ce060bb6a98" ref="Microsoft.RedDog.Contract\Interface\CustomerServicesWebRole:Endpoint@ServiceDefinition">
+        <interfaceReference Id="5ce8b289-2014-4aed-aa62-285f0f014d52" ref="Microsoft.RedDog.Contract\Interface\CustomerServicesWebRole:Endpoint@ServiceDefinition">
           <inPort>
             <inPortMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole:Endpoint" />
+          </inPort>
+        </interfaceReference>
+        <interfaceReference Id="2264f73c-61a5-4fbd-ba6c-f985b822ff75" ref="Microsoft.RedDog.Contract\Interface\CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput@ServiceDefinition">
+          <inPort>
+            <inPortMoniker name="/AzureCustomerServices/AzureCustomerServicesGroup/CustomerServicesWebRole:Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" />
           </inPort>
         </interfaceReference>
       </interfacereferences>

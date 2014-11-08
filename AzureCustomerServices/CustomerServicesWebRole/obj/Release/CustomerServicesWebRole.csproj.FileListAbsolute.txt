@@ -56,3 +56,4 @@ C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\CustomerServicesWebRole
 C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\CustomerServicesWebRole\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\CustomerServicesWebRole\obj\Release\CustomerServicesWebRole.dll
 C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\CustomerServicesWebRole\obj\Release\CustomerServicesWebRole.pdb
+C:\Users\apervaiz\Desktop\Hardware\AzureCustomerServices\CustomerServicesWebRole\obj\Release\CustomerServicesWebRole.csprojResolveAssemblyReference.cache

@@ -25,6 +25,14 @@
       <!-- frequency, in seconds, to transfer the perf counters to the logs from the system-->
       <Setting name="PerfMonScheduledTransferPeriod" value="120" />
       <Setting name="ProcessQueueName" value="codecampqueue" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="amanpervaiz" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEG+In8ISxHGoTcnLIeDreFwwDQYJKoZIhvcNAQEBBQAEggEA1TmSAQiFFDx8O0IvkD+VrlS3FJaUzUa2VMC38ftlLYLeW1f7aLCf5vFlXiyirtcAbrdF1VemASQS43D6VhsGixv5yZtRqjNy/Gjm1aihjfqXM5RVfmhOqgPb5oLPer9H2OfcZFnwUZdyhoiH87XvpgiPQ0/BJG4QmRPLMgQ9d5Y4Vx0ZJBo2HDNHPQ8WOwjG1a1K8Z5OSeX26SK8ciSIEwn1h01RrPbgIN4Aa96z8Lj/PnO0JLCjow4uOztgqB0cSJ9Frya9amPqFAQyrXaV+Wt+v1RlUHt9enSBzork3eI/sqlyOgwCa28jmOHvqTZfyAgVaTkLD7owHiNJA36lNTAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECPthdUpppCOUgBDTN2f57Yr6v73YDRmyN/Nk" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-11-07T23:59:59.0000000-08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
     </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="C0B4A3E05BE4DE686B44FDF516A530B597F810CD" thumbprintAlgorithm="sha1" />
+    </Certificates>
   </Role>
 </ServiceConfiguration>

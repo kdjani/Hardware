@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ServiceConfiguration serviceName="AzureCustomerServices" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
-	<Role name="CustomerServicesWebRole">
-		<Instances count="1" />
-		<ConfigurationSettings>
-			<Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString"
-										 value="DefaultEndpointsProtocol=https;AccountName=monkey;
-               AccountKey=KUt+Hv4LlD6rrsGhEP3DmzUYTaloN9QXyQXa8Npuhbmq/r9MYi0vI7oCf14N40elKR01/5CBhVhYWGB/mYyGAQ==" />
-			<Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;
-               AccountName=monkey;AccountKey=KUt+Hv4LlD6rrsGhEP3DmzUYTaloN9QXyQXa8Npuhbmq/r9MYi0vI7oCf14N40elKR01/5CBhVhYWGB/mYyGAQ==" />
-			<Setting name="dbConnString" value="Server=tcp:nroclmnglj.database.windows.net;
-               Database=monkey2;User ID=contactmanageradmin@nroclmnglj;Password=&amp;mazlnsxkH232;
-               Trusted_Connection=False;Encrypt=True;" />
-			<!-- This is the max number of times to try executing the database commands before giving up. -->
-			<Setting name="MaxTryCount" value="4" />
-			<!-- This is the time interval to sleep between SQL retries in case there's a problem. It's in ms. -->
-			<Setting name="RetrySleepInterval" value="2500" />
-			<!-- frequency, in seconds, to retrieve the perf counters -->
-			<Setting name="PerfMonSampleRate" value="60" />
-			<!-- frequency, in seconds, to transfer the perf counters to the logs from the system-->
-			<Setting name="PerfMonScheduledTransferPeriod" value="120" />
-			<Setting name="ProcessQueueName" value="codecampqueue" />
-		</ConfigurationSettings>
-	</Role>
+  <Role name="CustomerServicesWebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=monkey;AccountKey=KUt+Hv4LlD6rrsGhEP3DmzUYTaloN9QXyQXa8Npuhbmq/r9MYi0vI7oCf14N40elKR01/5CBhVhYWGB/mYyGAQ==" />
+      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=monkey;AccountKey=KUt+Hv4LlD6rrsGhEP3DmzUYTaloN9QXyQXa8Npuhbmq/r9MYi0vI7oCf14N40elKR01/5CBhVhYWGB/mYyGAQ==" />
+      <Setting name="dbConnString" value="Server=tcp:nroclmnglj.database.windows.net;Database=monkey2;User ID=contactmanageradmin@nroclmnglj;Password=&amp;mazlnsxkH232;Trusted_Connection=False;Encrypt=True;" />
+      <!-- This is the max number of times to try executing the database commands before giving up. -->
+      <Setting name="MaxTryCount" value="4" />
+      <!-- This is the time interval to sleep between SQL retries in case there's a problem. It's in ms. -->
+      <Setting name="RetrySleepInterval" value="2500" />
+      <!-- frequency, in seconds, to retrieve the perf counters -->
+      <Setting name="PerfMonSampleRate" value="60" />
+      <!-- frequency, in seconds, to transfer the perf counters to the logs from the system-->
+      <Setting name="PerfMonScheduledTransferPeriod" value="120" />
+      <Setting name="ProcessQueueName" value="codecampqueue" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="amanpervaiz" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEG+In8ISxHGoTcnLIeDreFwwDQYJKoZIhvcNAQEBBQAEggEA1TmSAQiFFDx8O0IvkD+VrlS3FJaUzUa2VMC38ftlLYLeW1f7aLCf5vFlXiyirtcAbrdF1VemASQS43D6VhsGixv5yZtRqjNy/Gjm1aihjfqXM5RVfmhOqgPb5oLPer9H2OfcZFnwUZdyhoiH87XvpgiPQ0/BJG4QmRPLMgQ9d5Y4Vx0ZJBo2HDNHPQ8WOwjG1a1K8Z5OSeX26SK8ciSIEwn1h01RrPbgIN4Aa96z8Lj/PnO0JLCjow4uOztgqB0cSJ9Frya9amPqFAQyrXaV+Wt+v1RlUHt9enSBzork3eI/sqlyOgwCa28jmOHvqTZfyAgVaTkLD7owHiNJA36lNTAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECPthdUpppCOUgBDTN2f57Yr6v73YDRmyN/Nk" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-11-07T23:59:59.0000000-08:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="C0B4A3E05BE4DE686B44FDF516A530B597F810CD" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
 </ServiceConfiguration>
