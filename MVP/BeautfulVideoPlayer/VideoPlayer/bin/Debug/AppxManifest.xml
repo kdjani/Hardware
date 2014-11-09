@@ -59,19 +59,19 @@
   <Extensions>
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
-        <Path>CLRHost.dll</Path>
-        <ActivatableClass ActivatableClassId="AnimationLibrary.AnimationLibrary" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="AnimationLibrary.AnimationItem" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="ApplicationConfiguration.Configuration" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="Logging.Logger" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="AnimationGenerator.AnimationGenerator" ThreadingModel="both" />
-        <ActivatableClass ActivatableClassId="GifMaker.GifMaker" ThreadingModel="both" />
+        <Path>ImageExtractor.dll</Path>
+        <ActivatableClass ActivatableClassId="ImageProcessing.ImageExtractor" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
     <Extension Category="windows.activatableClass.inProcessServer">
       <InProcessServer>
-        <Path>ImageExtractor.dll</Path>
-        <ActivatableClass ActivatableClassId="ImageProcessing.ImageExtractor" ThreadingModel="both" />
+        <Path>CLRHost.dll</Path>
+        <ActivatableClass ActivatableClassId="AnimationLibrary.AnimationItem" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="AnimationLibrary.AnimationLibrary" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="ApplicationConfiguration.Configuration" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="Logging.Logger" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="AnimationGenerator.AnimationGenerator" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="GifMaker.GifMaker" ThreadingModel="both" />
       </InProcessServer>
     </Extension>
   </Extensions>

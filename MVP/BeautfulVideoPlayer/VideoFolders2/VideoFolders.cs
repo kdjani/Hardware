@@ -391,7 +391,15 @@ namespace VideoFolders
                 {
                     Logging.Logger.Info(string.Format("VideoFolders::ScanAllKnownFolders - Sleeping ..."));
 
+                    // If scan is stopped then sleep for longer times
+                    if (this.scanState == ScanningState.Stopped)
+                    {
+                        await Task.Delay(TimeSpan.FromMilliseconds(10000));
+                    }
+                    else
+                    {
                         await Task.Delay(TimeSpan.FromMilliseconds(10));
+                    }
 
 
 
@@ -550,21 +558,37 @@ namespace VideoFolders
                                 ScanningFile currentFile = null;
                                 while (true)
                                 {
-                                    if (fileLibrary.FileMap.Count == 0)
+                                    /*
+                                    if (this.knownFolders.Count != 0)
                                     {
                                         Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders No files in library ..."));
                                         await Task.Delay(TimeSpan.FromSeconds(10));
                                         break;
                                     }
+                                     */
 
                                     currentFile = await GetNextFile();
                                     if (currentFile == null)
                                     {
+                                        Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders GetNextFile returned null ..."));
+
                                         if (this.knownFolders.Count != 0)
                                         {
                                             this.shallowScan = !this.shallowScan;
+                                            currentFile = await GetNextFile();
+                                            if (currentFile == null)
+                                            {
+                                                Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders GetNextFile returned null after changing scan type ..."));
+                                                // We are done with scanning for now
+                                                //await Task.Delay(TimeSpan.FromMilliseconds(1000));
+                                                await this.StopScan();
+                                                break;
+                                            }
                                         }
-                                        break;
+                                        else
+                                        {
+                                            break;
+                                        }
                                     }
 
                                     if (this.shallowScan)
@@ -580,6 +604,7 @@ namespace VideoFolders
                                     }
                                     else
                                     {
+                                        /* TODO enable once deep scanning is enabled.
                                         bool itemExists = false;
                                         string hash = await ComputeMD5(currentFile.Path);
                                         itemExists = this.library.DoesItemExist(hash, AnimationLibrary.AnimationType.Category1Animation);
@@ -589,12 +614,15 @@ namespace VideoFolders
                                         }
                                         else
                                         {
+                                         */
                                             await this.currentFolderBeingScanned.SetFileAsScanned(currentFile, false);
+                                        /*
                                         }
+                                         */
                                     }
                                 }
 
-
+                                /* TODO comment deep scanning for some time
                                 if (currentFile != null && !this.shallowScan)
                                 {
                                     Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders - Considering: {0}", currentFile.Name));
@@ -668,6 +696,7 @@ namespace VideoFolders
                                         await this.currentFolderBeingScanned.SetFileAsScanned(currentFile, false);
                                     }
                                 }
+                                 */
 
                                 if (this.scanState == ScanningState.Stopped)
                                 {

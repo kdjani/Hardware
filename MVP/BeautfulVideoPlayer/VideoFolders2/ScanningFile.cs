@@ -489,6 +489,21 @@ namespace VideoFolders
             }
         }
 
+        internal static bool FileBeingWritten = false;
+        internal static object WriteLock = new object();
+
+        private static async Task GetLock()
+        {
+            lock(WriteLock)
+            {
+                while(FileBeingWritten)
+                {
+                    await Task.Delay(TimeSpan.FromMilliseconds(10));
+                    // Need to use concurrent queue
+                }
+            }
+        }
+
         private async Task SaveThumbnailToFile()    
         {
             #region start
@@ -504,6 +519,27 @@ namespace VideoFolders
                 //So need to take lock
                 if (this.GetThumbnailSavingLock())
                 {
+                    //verify if thumbnail already exists.
+
+                    bool fileFoundOnDisk = true;
+                    try
+                    {
+                        StorageFolder storageFolder = await ApplicationData.Current.LocalFolder.CreateFolderAsync("Thumbnails", CreationCollisionOption.OpenIfExists);
+                        StorageFile thumbnailFile = await storageFolder.GetFileAsync(this.hash + ".png");
+                        IRandomAccessStream fileStream = await thumbnailFile.OpenAsync(FileAccessMode.Read);
+                        await fileStream.FlushAsync();
+                        fileStream.Dispose();
+                    }
+                    catch (Exception e)
+                    {
+                        fileFoundOnDisk = false;
+                    }
+
+                    if(fileFoundOnDisk)
+                    {
+                        return;
+                    }
+
                     var thumbnail = await this.file.GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode.VideosView);
                     if (thumbnail != null)
                     {

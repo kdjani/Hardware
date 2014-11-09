@@ -66,8 +66,8 @@ void setup() {
   Serial.println("Get version!");
   
 
-   //GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_RMCGGA);
-   GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_ALLDATA);
+   GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_RMCONLY);
+   //GPS.sendCommand(PMTK_SET_NMEA_OUTPUT_ALLDATA);
    GPS.sendCommand(PMTK_SET_NMEA_UPDATE_1HZ);
    GPS.sendCommand(PGCMD_NOANTENNA);
 
@@ -116,39 +116,59 @@ void loop() {
                 alreadyUploading = false;
 	
 	} else  {
-		char c = GPS.read();
+                GPS.read();
+		//char c = GPS.read();
 		// if you want to debug, this is a good time to do it!
-		if (GPSECHO)
-		  if (c) Serial.print(c);
+		//if (GPSECHO)
+		  //if (c) Serial.print(c);
 
 		if (GPS.newNMEAreceived())
 		{
-		  Serial.println("Got sentence");
+		  Serial.println("NMEA received");
+		  char *stringptr = GPS.lastNMEA();
+                  Serial.println(stringptr);
+                  
+                  Serial.println(GPS.fix);
+                  
+                  // this also sets the newNMEAreceived() flag to false 
+		  if (!GPS.parse(stringptr))
+                  {
+  		    Serial.println("NMEA could not be parsed");
+	            return;  // we can fail to parse a sentence in which case we should just wait for another
+		  }
+                  else
+                  {
+                    Serial.println("Successfully parsed.");
+                  }
 
+                  if (GPS.fix == 0) {
+                          Serial.println("No GSPS fix. Sleeping ...");
+                          delay(1000);
+                          return;
+                      }
+
+                  Serial.println("GPS fix found!");
+                  
 		  File dataFile = FileSystem.open("/mnt/sd/arduino/www/mysketch/datalog.txt", FILE_APPEND);
 
-		  char *stringptr = GPS.lastNMEA();
-		  
-		  // this also sets the newNMEAreceived() flag to false 
-		  if (!GPS.parse(stringptr)){
-			 return;  // we can fail to parse a sentence in which case we should just wait for another
-		  }
-
-		  // if the file is available, write to it:
-		  if (dataFile) {
-			uint8_t stringsize = strlen(stringptr);
-			dataFile.write((uint8_t *)stringptr, stringsize);
-			dataFile.close();
-
-			++currentLoopCount;
-			
-			// print to the serial port too:
-			Serial.println("Wrote data");
-		  }
-		  // if the file isn't open, pop up an error:
-		  else {
-			Serial.println("error opening datalog.txt");
-		  }
+                  if(strstr(stringptr, "RMC")){
+                    Serial.print("Found RMC data.");
+  		  // if the file is available, write to it:
+  		  if (dataFile) {
+  			uint8_t stringsize = strlen(stringptr);
+  			dataFile.write((uint8_t *)stringptr, stringsize);
+  			dataFile.close();
+  
+  			++currentLoopCount;
+  			
+  			// print to the serial port too:
+  			Serial.println("Wrote gps data to file.");
+  		  }
+  		  // if the file isn't open, pop up an error:
+  		  else {
+  			Serial.println("error opening datalog.txt");
+  		  }
+                  }
 		}
 	}
 }

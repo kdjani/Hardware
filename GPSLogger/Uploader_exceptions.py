@@ -4,7 +4,6 @@ import httplib
 #Change for VS
 #import urllib.request
 #import urllib.parse
-#import http.client
 #Change
 import datetime
 import os
@@ -121,6 +120,7 @@ try:
 				if original.startswith("$GPRMC"):
 					writeLog(logFile, "Row found starting with $GPRMC: " + original)
 					startTime =  [x.strip() for x in original.split(',')][1]
+					startTime =  [x.strip() for x in startTime.split('.')][0]
 					longitude =  [x.strip() for x in original.split(',')][3]
 					longitudeDirection = [x.strip() for x in original.split(',')][4]
 					latitude =  [x.strip() for x in original.split(',')][5]
@@ -155,20 +155,23 @@ try:
 							data = ADD_TEMPLATE.format(userId, deviceId, startTime, longitudeStr, latitudeStr, altitude)
 							binary_data = data.encode('utf8')
 							writeLog(logFile, "data: " + str(data))
-							
-							#Change
-							#Change for arduino
 							conn = httplib.HTTPConnection(url)
-							#Change for VS
-							#conn = http.client.HTTPConnection(url)
-							#Change
-							
 							conn.request("POST", "/CustomerServices.svc", binary_data, headers)
 							f = conn.getresponse()
 
 							writeLog(logFile, f.status)
 							writeLog(logFile, f.reason)
 							writeLog(logFile, f.read())
+
+							#Change
+							#Change for arduino
+							#req = Request(site, binary_data, headers)
+							#f = urllib.urlopen(req)
+							#Change for VS
+							#req = urllib.request.Request(site, binary_data, headers)
+							#f = urllib.request.urlopen(req)
+							#Change
+							#writeLog(logFile, f.read())
 							writeLog(logFile, "Sent data up...")
 							iterator = 0
 						else:
