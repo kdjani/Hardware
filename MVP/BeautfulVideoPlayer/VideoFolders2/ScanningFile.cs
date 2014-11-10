@@ -412,6 +412,7 @@ namespace VideoFolders
             try
             {
             #endregion
+                // TODO scanner work
                 this.Hash = ScanningFile.ComputeMD5(this.file.Path);
                 var properties = await this.file.Properties.GetVideoPropertiesAsync();
                 var basicProperties = await this.file.GetBasicPropertiesAsync();
@@ -492,17 +493,6 @@ namespace VideoFolders
         internal static bool FileBeingWritten = false;
         internal static object WriteLock = new object();
 
-        private static async Task GetLock()
-        {
-            lock(WriteLock)
-            {
-                while(FileBeingWritten)
-                {
-                    await Task.Delay(TimeSpan.FromMilliseconds(10));
-                    // Need to use concurrent queue
-                }
-            }
-        }
 
         private async Task SaveThumbnailToFile()    
         {

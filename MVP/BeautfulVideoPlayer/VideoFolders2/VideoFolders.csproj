@@ -136,11 +136,15 @@
     <Compile Include="FileScanState.cs" />
     <Compile Include="FileSystemHelper.cs" />
     <Compile Include="FolderScanState.cs" />
+    <Compile Include="IScanner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scanner.cs" />
     <Compile Include="ScanningCommand.cs" />
     <Compile Include="ScanningFile.cs" />
     <Compile Include="ScanningFolder.cs" />
     <Compile Include="ScanningState.cs" />
+    <Compile Include="ScanType.cs" />
+    <Compile Include="ShallowFileScanner.cs" />
     <Compile Include="SortedList.cs" />
     <Compile Include="Sorting.cs" />
     <Compile Include="VideoFolders.cs" />
