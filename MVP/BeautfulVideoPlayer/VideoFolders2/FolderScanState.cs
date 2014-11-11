@@ -12,6 +12,6 @@ namespace VideoFolders
         Scanned,
         PartiallyScanned,
         ShallowScanned,
-        Error
+        Error,
     }
 }

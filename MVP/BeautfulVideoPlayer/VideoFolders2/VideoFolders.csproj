@@ -132,6 +132,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeepFileScanner.cs" />
     <Compile Include="FileLibrary.cs" />
     <Compile Include="FileScanState.cs" />
     <Compile Include="FileSystemHelper.cs" />

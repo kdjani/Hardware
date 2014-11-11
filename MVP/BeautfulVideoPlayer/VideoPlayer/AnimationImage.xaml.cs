@@ -250,12 +250,12 @@ namespace TriGemini.Controls
                     {
                         //if (IncrementalLoadingSample.MainPage.library != null)
                         {
-                            //bool itemExists = IncrementalLoadingSample.MainPage.library.DoesItemExist(hash, AnimationLibrary.AnimationType.Category1Animation);
-                            //if (itemExists)
+                            bool itemExists = IncrementalLoadingSample.MainPage.library.DoesItemExist(hash, AnimationLibrary.AnimationType.Category1Animation);
+                            if (itemExists)
                             {
                                 AnimationLibrary.AnimationItem animation = IncrementalLoadingSample.MainPage.library.GetItem(hash, AnimationLibrary.AnimationType.Category1Animation);
 
-                                //if (_bitmapFrames != null)
+                                if (_bitmapFrames != null)
                                 {
                                     _bitmapFrames.Clear();
                                     StorageFolder storageFolder = null;

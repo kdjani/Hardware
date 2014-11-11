@@ -23,7 +23,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="E:\backup\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\bin\Debug\BasicMediaPlayback.exe">
       <PackagePath>BasicMediaPlayback.exe</PackagePath>
-      <Modified>2014-11-08T23:35:48.951</Modified>
+      <Modified>2014-11-11T08:05:44.403</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\backup\Desktop\Hardware\MVP\BeautfulVideoPlayer\AnimationLibrary\bin\x64\Debug\AnimationLibrary.winmd">
       <PackagePath>AnimationLibrary.winmd</PackagePath>
@@ -71,7 +71,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\backup\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoFolders2\bin\x64\Debug\VideoFolders.dll">
       <PackagePath>VideoFolders.dll</PackagePath>
-      <Modified>2014-11-08T23:35:46.596</Modified>
+      <Modified>2014-11-11T08:05:43.251</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\backup\Desktop\Hardware\MVP\BeautfulVideoPlayer\AnimationLibrary\bin\x64\Debug\TCD.Serialization.dll">
       <PackagePath>TCD.Serialization.dll</PackagePath>
@@ -151,7 +151,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\backup\Desktop\Hardware\MVP\BeautfulVideoPlayer\VideoPlayer\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-11-08T22:23:29.978</Modified>
+      <Modified>2014-11-11T06:38:28.401</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

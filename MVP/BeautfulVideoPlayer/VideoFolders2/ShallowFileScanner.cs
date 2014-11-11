@@ -19,13 +19,13 @@ namespace VideoFolders
     /// <summary>
     /// Shallow scanner. Contains concurrent queue to process scan. After done, updates the scan state.
     /// </summary>
-    public class ShallowFileScanner : Scanner<ScanningFile>
+    public class ShallowFileScanner : Scanner<Tuple<ScanningFile, ScanningFolder>>
     {
-        public override bool IsItemAlreadyScanned(ScanningFile item)
+        public override bool IsItemAlreadyScanned(Tuple<ScanningFile, ScanningFolder> item)
         {
-            if(this.fileLibrary.DoesFileExistInLibrary(item.Hash))
+            if(this.fileLibrary.DoesFileExistInLibrary(item.Item1.Hash))
             {
-                ScanningFile alreadyExistingFile = this.fileLibrary.GetFileFromLibrary(item.Hash);
+                ScanningFile alreadyExistingFile = this.fileLibrary.GetFileFromLibrary(item.Item1.Hash);
                 if(alreadyExistingFile.ScanState == FileScanState.ShallowScanned || alreadyExistingFile.ScanState == FileScanState.Scanned)
                 {
                     return true;
@@ -34,8 +34,9 @@ namespace VideoFolders
 
             return false;
         }
-        public override async Task ProcessQueueItem(ScanningFile item)
+        public override async Task ProcessQueueItem(Tuple<ScanningFile, ScanningFolder> entry)
         {
+            ScanningFile item = entry.Item1;
             StorageFile file = await item.GetStorageFile();
 
             item.Hash = ScanningFile.ComputeMD5(file.Path);
@@ -53,18 +54,25 @@ namespace VideoFolders
             item.DateModified = basicProperties.DateModified;
             item.FileType = file.FileType;
 
-            await this.SaveThumbnailToFile(item);
+            bool thumbnailExists = await this.SaveThumbnailToFile(item);
 
             item.ScanState = FileScanState.ShallowScanned;
+
+            await entry.Item2.SetFileAsScanned(item, true);
+            entry.Item1.ThumbnailExists = thumbnailExists;
+            this.fileLibrary.Dirty = true;
+            this.fileLibrary.SaveToXml();
         }
 
-        private async Task SaveThumbnailToFile(ScanningFile file)
+        private async Task<bool> SaveThumbnailToFile(ScanningFile file)
         {
             #region start
             string methodName = "SaveThumbnailToFile";
             bool bSucceeded = true;
             Exception exception = null;
             Logging.Logger.Info(string.Format("{0}::{1} {2} - Start", this.GetType().Name, methodName, file.Name));
+
+            bool thumbnailExists = false;
 
             try
             {
@@ -85,7 +93,7 @@ namespace VideoFolders
 
                     if (fileFoundOnDisk)
                     {
-                        return;
+                        return true;
                     }
 
                     StorageFile storageFile = await file.GetStorageFile();
@@ -93,6 +101,7 @@ namespace VideoFolders
                     var thumbnail = await storageFile.GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode.VideosView);
                     if (thumbnail != null)
                     {
+                        thumbnailExists = true;
                         WriteableBitmap bitmap = new WriteableBitmap((int)thumbnail.OriginalWidth, (int)thumbnail.OriginalHeight);
                         bitmap.SetSource(thumbnail);
                         StorageFolder storageFolder = await ApplicationData.Current.LocalFolder.CreateFolderAsync("Thumbnails", CreationCollisionOption.OpenIfExists);
@@ -140,6 +149,9 @@ namespace VideoFolders
                 await Task.Delay(TimeSpan.FromSeconds(5));
                 throw exception;
             }
+
+            return thumbnailExists;
+
             #endregion
         }
     }

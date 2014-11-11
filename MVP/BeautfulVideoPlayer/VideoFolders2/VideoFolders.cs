@@ -22,10 +22,11 @@ namespace VideoFolders
         private ScanningCommand scanCommand;
         private ScanningState scanState;
         private ScanningFolder currentFolderBeingScanned;
-        private ImageExtractor imageExtractor;
         private Configuration configuration;
-        private AnimationLibrary.AnimationLibrary library;
         public static FileLibrary fileLibrary;
+        DeepFileScanner deepScanner;
+        ShallowFileScanner shallowScanner;
+        private AnimationLibrary.AnimationLibrary library;
 
         public FileLibrary ScannedFileLibrary
         {
@@ -76,15 +77,19 @@ namespace VideoFolders
             {
             #endregion
                 this.videoFoldersLock = new object();
-                this.imageExtractor = new ImageExtractor();
+                
                 this.configuration = new Configuration();
                 this.knownFolders = new List<ScanningFolder>();
 
                 this.scanState = ScanningState.None;
                 this.scanCommand = ScanningCommand.None;
                 this.currentFolderBeingScanned = null;
-                this.library = library;
                 fileLibrary = new FileLibrary();
+                this.deepScanner = new DeepFileScanner(library);
+                this.library = library;
+                this.deepScanner.Initialize(fileLibrary);
+                this.shallowScanner = new ShallowFileScanner();
+                this.shallowScanner.Initialize(fileLibrary);
 
                 SetCommand(ScanningCommand.Start, ScanningState.None, ScanningState.Started).Wait();
                 this.ScanAllKnownFolders();
@@ -558,15 +563,6 @@ namespace VideoFolders
                                 ScanningFile currentFile = null;
                                 while (true)
                                 {
-                                    /*
-                                    if (this.knownFolders.Count != 0)
-                                    {
-                                        Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders No files in library ..."));
-                                        await Task.Delay(TimeSpan.FromSeconds(10));
-                                        break;
-                                    }
-                                     */
-
                                     currentFile = await GetNextFile();
                                     if (currentFile == null)
                                     {
@@ -593,110 +589,36 @@ namespace VideoFolders
 
                                     if (this.shallowScan)
                                     {
-                                        deleteMe.Add(new Tuple<string, string>(currentFolderBeingScanned.Folder.Path, currentFile.Path));
                                         bool fileAlreadyAdded = await fileLibrary.AddFileToLibrary(currentFolderBeingScanned, currentFile);
                                         if (!fileAlreadyAdded)
                                         {
-                                            AddFileToIndex(currentFile);//TODO leak
+                                            this.shallowScanner.AddItemToScan(new Tuple<ScanningFile, ScanningFolder>(currentFile, currentFolderBeingScanned));
+                                            await Task.Delay(TimeSpan.FromMilliseconds(100)); 
+                                            AddFileToIndex(currentFile);
                                         }
-
-                                        await this.currentFolderBeingScanned.SetFileAsScanned(currentFile, true);
+                                        else
+                                        {
+                                            await this.currentFolderBeingScanned.SetFileAsScanned(currentFile, true);
+                                        }
                                     }
                                     else
                                     {
-                                        /* TODO enable once deep scanning is enabled.
+                                        // add file if not added
+                                        await fileLibrary.AddFileToLibrary(currentFolderBeingScanned, currentFile);
                                         bool itemExists = false;
                                         string hash = await ComputeMD5(currentFile.Path);
                                         itemExists = this.library.DoesItemExist(hash, AnimationLibrary.AnimationType.Category1Animation);
                                         if (!itemExists)
                                         {
-                                            break;
+                                            this.deepScanner.AddItemToScan(new Tuple<ScanningFile, ScanningFolder>(currentFile, currentFolderBeingScanned));
+                                            await Task.Delay(TimeSpan.FromSeconds(5)); 
                                         }
                                         else
                                         {
-                                         */
                                             await this.currentFolderBeingScanned.SetFileAsScanned(currentFile, false);
-                                        /*
                                         }
-                                         */
                                     }
                                 }
-
-                                /* TODO comment deep scanning for some time
-                                if (currentFile != null && !this.shallowScan)
-                                {
-                                    Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders - Considering: {0}", currentFile.Name));
-
-                                    string hash = await ComputeMD5(currentFile.Path);
-                                    Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders - Hash: {0}:{1}", hash, currentFile.Name));
-
-                                    {
-                                        var userImagesFolder = await CreateFolder(ApplicationData.Current.LocalFolder, hash);
-
-                                        this.imageExtractor.GenerateThumbnails(await currentFile.GetStorageFile(), hash);
-                                        int giveup = 0;
-                                        while (imageExtractor.IsGenerationFinished() == false)
-                                        {
-                                            Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders - Waiting to finish"));
-                                            await Task.Delay(TimeSpan.FromSeconds(this.configuration.ScanRetryDelay));
-                                            if (giveup++ > this.configuration.ScanRetryTimes)
-                                            {
-                                                Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders - Giving up on {0} ...", currentFile.Path));
-
-                                                //giveup = 0;
-                                                //imageExtractor.GenerateThumbnails(currentFile, hash);
-                                                break;
-                                            }
-                                        }
-
-                                        if (imageExtractor.IsUnrecoverableError() || (giveup++ > this.configuration.ScanRetryTimes))
-                                        {
-                                            Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders - Skipping file because of unrecoverable error."));
-                                        }
-                                        else
-                                        {
-
-                                            Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders - Starting resizing"));
-
-                                            StorageFolder storageFolder = await ApplicationData.Current.LocalFolder.GetFolderAsync(hash);
-                                            IReadOnlyList<StorageFile> fileList = await storageFolder.GetFilesAsync();
-                                            foreach (StorageFile sampleFile in fileList)
-                                            {
-                                                Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders - Considering file for resize: {0}", sampleFile.Name));
-
-                                                if (!sampleFile.Name.StartsWith("R_"))
-                                                {
-                                                    var item = await storageFolder.TryGetItemAsync("R_" + sampleFile.Name);
-
-                                                    if (item != null)
-                                                    {
-                                                        Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders - Deleting resize olf file: {0}", sampleFile.Name));
-                                                        await item.DeleteAsync();
-                                                    }
-
-                                                    Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders - Creating resized: {0}", sampleFile.Name));
-
-                                                    StorageFile newFile = await storageFolder.CreateFileAsync("R_" + sampleFile.Name);
-                                                    await ResizePng(sampleFile, newFile, Configuration.ImageHeight, Configuration.ImageHeight);
-                                                    Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders - Deleting resize original: {0}", sampleFile.Name));
-                                                    await sampleFile.DeleteAsync();
-
-                                                    Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders Test"));
-                                                }
-                                            }
-
-                                            Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders-  Adding to library: {0}:{1}", hash, currentFile.Name));
-
-                                            AnimationLibrary.AnimationItem libraryEntry = new AnimationLibrary.AnimationItem(hash, hash, AnimationLibrary.AnimationType.Category1Animation);
-                                            this.library.AddItem(libraryEntry);
-                                        }
-
-
-                                        Logging.Logger.Info(string.Format("VideoFolders::GetAllViodeFolders - Adding to library: {0}", currentFile.Name));
-                                        await this.currentFolderBeingScanned.SetFileAsScanned(currentFile, false);
-                                    }
-                                }
-                                 */
 
                                 if (this.scanState == ScanningState.Stopped)
                                 {
@@ -726,8 +648,6 @@ namespace VideoFolders
             }
                 #endregion
         }
-
-        private static List<Tuple<string, string>> deleteMe = new List<Tuple<string, string>>();
 
         private async Task AddFileToIndex(ScanningFile file)
         {
@@ -774,68 +694,7 @@ namespace VideoFolders
                 #endregion
         }
 
-        private async Task ResizePng(StorageFile sourceFile, StorageFile destinationFile, int newWidth, int newHeight)
-        {
-            #region start
-            string methodName = "ResizePng";
-            bool bSucceeded = true;
-            Exception exception = null;
-            Logging.Logger.Info(string.Format("{0}::{1} - Start", this.GetType().Name, methodName));
-            
-            try
-            {
-            #endregion
-                using (var sourceStream = await sourceFile.OpenAsync(FileAccessMode.Read))
-                {
-                    BitmapDecoder decoder = await BitmapDecoder.CreateAsync(sourceStream);
-
-                    int updatedWidth = (int)Math.Ceiling((double)decoder.PixelWidth / (double)decoder.PixelHeight * (double)newHeight);
-
-                    BitmapTransform transform = new BitmapTransform() { ScaledHeight = (uint)newHeight, ScaledWidth = (uint)updatedWidth };
-
-
-                    PixelDataProvider pixelData = await decoder.GetPixelDataAsync(
-                        BitmapPixelFormat.Rgba8,
-                        BitmapAlphaMode.Straight,
-                        transform,
-                        ExifOrientationMode.RespectExifOrientation,
-                        ColorManagementMode.DoNotColorManage);
-
-                    using (var destinationStream = await destinationFile.OpenAsync(FileAccessMode.ReadWrite))
-                    {
-                        BitmapEncoder encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.PngEncoderId, destinationStream);
-
-                        BitmapBounds bounds = new BitmapBounds();
-                        bounds.Height = (uint)newHeight;
-                        bounds.Width = (uint)newWidth;
-                        bounds.X = (uint)((updatedWidth - newWidth) / 2);
-                        bounds.Y = 0;
-                        encoder.BitmapTransform.Bounds = bounds;
-
-                        encoder.SetPixelData(BitmapPixelFormat.Rgba8, BitmapAlphaMode.Premultiplied, (uint)updatedWidth, (uint)newHeight, 96, 96, pixelData.DetachPixelData());
-                        await encoder.FlushAsync();
-                    }
-                }
-            #region end
-            }
-            catch (Exception e)
-            {
-                bSucceeded = false;
-                exception = e;
-            }
-            finally
-            {
-                Logging.Logger.Info(string.Format("{0}::{1} - Complete", this.GetType().Name, methodName));
-            }
-
-            if (!bSucceeded)
-            {
-                Logging.Logger.Critical(string.Format("{0}::{1} - Failed", this.GetType().Name, exception.ToString()));
-                await Task.Delay(TimeSpan.FromSeconds(5));
-                throw exception;
-            }
-                #endregion
-        }
+  
 
         private async Task<bool> StartScan()
         {
@@ -1099,57 +958,6 @@ namespace VideoFolders
             #endregion
 
             return true;
-        }
-
-        private async Task<StorageFolder> CreateFolder(StorageFolder storageFolder, string folderName)
-        {
-            StorageFolder folder = null;
-
-            #region start
-            string methodName = "CreateFolder";
-            bool bSucceeded = true;
-            Exception exception = null;
-            Logging.Logger.Info(string.Format("{0}::{1} - Start", this.GetType().Name, methodName));
-            
-            try
-            {
-            #endregion
-                // we do the try w/ empty catch because the GetFolderAsync will throw if not found and we cannot do await inside a catch block  
-                try
-                {
-                    folder = await storageFolder.GetFolderAsync(folderName);
-                }
-                catch { }
-
-                if (folder == null)
-                {
-                    Logging.Logger.Info(string.Format("VideoFolders::CreateFolder - Creating"));
-                    folder = await storageFolder.CreateFolderAsync(folderName);
-                }
-
-                Logging.Logger.Info(string.Format("VideoFolders::CreateFolder - {0}", folder.Name));
-
-             #region end
-            }
-            catch (Exception e)
-            {
-                bSucceeded = false;
-                exception = e;
-            }
-            finally
-            {
-                Logging.Logger.Info(string.Format("{0}::{1} - Complete", this.GetType().Name, methodName));
-            }
-
-            if (!bSucceeded)
-            {
-                Logging.Logger.Critical(string.Format("{0}::{1} - Failed", this.GetType().Name, exception.ToString()));
-                await Task.Delay(TimeSpan.FromSeconds(5));
-                throw exception;
-            }
-            #endregion
-
-            return folder;
         }
 
         private async Task<string> ComputeMD5(string str)

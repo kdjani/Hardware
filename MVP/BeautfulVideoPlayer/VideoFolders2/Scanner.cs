@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace VideoFolders
 {
-    abstract class Scanner<T> : IScanner
+    abstract public class Scanner<T> : IScanner
     {
         internal FileLibrary fileLibrary;
         internal ConcurrentQueue<T> queue;
@@ -17,6 +17,7 @@ namespace VideoFolders
         {
             scanStarted = false;
             this.fileLibrary = fileLibrary;
+            this.queue = new ConcurrentQueue<T>();
             ProcessFiles();
         }
 
@@ -25,22 +26,23 @@ namespace VideoFolders
             if(!IsItemAlreadyScanned(item))
             {
                 this.queue.Enqueue(item);
+                this.StartScan();
             }
         }
 
-        void StartScan(FileLibrary fileLibrary)
+        public void StartScan()
         {
             this.scanStarted = true;
         }
-        void PauseScan(FileLibrary fileLibrary)
+        public void PauseScan()
         {
             this.scanStarted = false;
         }
-        void ResumeScan(FileLibrary fileLibrary)
+        public void ResumeScan()
         {
             this.scanStarted = true;
         }
-        void StopScan(FileLibrary fileLibrary)
+        public void StopScan()
         {
             this.scanStarted = false;
             T ignored; while (this.queue.TryDequeue(out ignored));
@@ -61,7 +63,10 @@ namespace VideoFolders
                         T item;
                         if(this.queue.TryDequeue(out item))
                         {
-                            await ProcessQueueItem(item);
+                            if (!IsItemAlreadyScanned(item))
+                            {
+                                await ProcessQueueItem(item);
+                            }
                         }
                     }
                 }
@@ -72,16 +77,8 @@ namespace VideoFolders
             }
         }
 
-        void AddItemToScan();
+        public abstract Task ProcessQueueItem(T item);
 
-        public abstract async Task ProcessQueueItem(T item)
-        {
-            await Task.Delay(TimeSpan.FromSeconds(0));
-        }
-
-        public abstract bool IsItemAlreadyScanned(T item)
-        {
-            throw new InvalidOperationException("Abstract method called.");
-        }
+        public abstract bool IsItemAlreadyScanned(T item);
     }
 }

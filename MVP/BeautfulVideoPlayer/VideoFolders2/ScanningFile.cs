@@ -317,11 +317,7 @@ namespace VideoFolders
             {
             #endregion
 
-                // TODO
-                // If thumbnail does not exist, then set a boolean indicating that. Check that and return null.
-                // Make sure caller handels null
-
-                if (this.scanState == FileScanState.ShallowScanned)
+                if (this.scanState == FileScanState.ShallowScanned || this.scanState == FileScanState.Scanned)
                 {
                     if (this.ThumbnailExists)
                     {
@@ -362,7 +358,6 @@ namespace VideoFolders
             return bitmap;
         }
 
-        //thumbnail TODO
         public ScanningFile(StorageFolder folder, StorageFile file)
         {
             #region start
@@ -427,10 +422,6 @@ namespace VideoFolders
                 this.Size = basicProperties.Size;
                 this.DateModified = basicProperties.DateModified;
                 this.FileType = file.FileType;
-
-                await this.SaveThumbnailToFile();
-
-                scanState = FileScanState.ShallowScanned;
             #region end
             }
             catch (Exception e)
@@ -451,144 +442,6 @@ namespace VideoFolders
                 #endregion
         }
 
-        private static List<Tuple<string, string>> debug;
-        private static List<string> debug2;
-
-        private bool savingThumbnail = false;
-        private object savingThumbnailLock = new object();
-        private bool GetThumbnailSavingLock()
-        {
-            Logging.Logger.Info(string.Format("{0}::{1} {2} - Start", this.GetType().Name, "GetThumbnailSavingLock", this.file.Name));
-
-            lock(savingThumbnailLock)
-            {
-                if(this.savingThumbnail == false)
-                {
-                    this.savingThumbnail = true;
-                    Logging.Logger.Info(string.Format("{0}::{1} {2} - true", this.GetType().Name, "GetThumbnailSavingLock", this.file.Name));
-                    return true;
-                }
-                else
-                {
-                    Logging.Logger.Info(string.Format("{0}::{1} {2} - false", this.GetType().Name, "GetThumbnailSavingLock", this.file.Name));
-                    return false;
-                }
-            }
-        }
-
-        private void ReleaseThumbnailSavingLock()
-        {
-            Logging.Logger.Info(string.Format("{0}::{1} {2} - Start", this.GetType().Name, "ReleaseThumbnailSavingLock", this.file.Name));
-
-            lock (savingThumbnailLock)
-            {
-                if (this.savingThumbnail == true)
-                {
-                    Logging.Logger.Info(string.Format("{0}::{1} - Start", this.GetType().Name, "ReleaseThumbnailSavingLock - false"));
-                    this.savingThumbnail = false;
-                }
-            }
-        }
-
-        internal static bool FileBeingWritten = false;
-        internal static object WriteLock = new object();
-
-
-        private async Task SaveThumbnailToFile()    
-        {
-            #region start
-            string methodName = "SaveThumbnailToFile";
-            bool bSucceeded = true;
-            Exception exception = null;
-            Logging.Logger.Info(string.Format("{0}::{1} {2} - Start", this.GetType().Name, methodName, this.file.Name));
-
-            try
-            {
-            #endregion
-                //You could be scanning + quick retrieve scanning (to show results when not in library)
-                //So need to take lock
-                if (this.GetThumbnailSavingLock())
-                {
-                    //verify if thumbnail already exists.
-
-                    bool fileFoundOnDisk = true;
-                    try
-                    {
-                        StorageFolder storageFolder = await ApplicationData.Current.LocalFolder.CreateFolderAsync("Thumbnails", CreationCollisionOption.OpenIfExists);
-                        StorageFile thumbnailFile = await storageFolder.GetFileAsync(this.hash + ".png");
-                        IRandomAccessStream fileStream = await thumbnailFile.OpenAsync(FileAccessMode.Read);
-                        await fileStream.FlushAsync();
-                        fileStream.Dispose();
-                    }
-                    catch (Exception e)
-                    {
-                        fileFoundOnDisk = false;
-                    }
-
-                    if(fileFoundOnDisk)
-                    {
-                        return;
-                    }
-
-                    var thumbnail = await this.file.GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode.VideosView);
-                    if (thumbnail != null)
-                    {
-                        WriteableBitmap bitmap = new WriteableBitmap((int)thumbnail.OriginalWidth, (int)thumbnail.OriginalHeight);
-                        bitmap.SetSource(thumbnail);
-                        StorageFolder storageFolder = await ApplicationData.Current.LocalFolder.CreateFolderAsync("Thumbnails", CreationCollisionOption.OpenIfExists);
-                        StorageFile thumbnailFile = await storageFolder.CreateFileAsync(this.hash + ".png", CreationCollisionOption.FailIfExists);
-                        IRandomAccessStream stream = await thumbnailFile.OpenAsync(FileAccessMode.ReadWrite);
-                        BitmapEncoder encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.BmpEncoderId, stream);
-                        Stream pixelStream = bitmap.PixelBuffer.AsStream();
-                        byte[] pixels = new byte[pixelStream.Length];
-                        await pixelStream.ReadAsync(pixels, 0, pixels.Length);
-                        encoder.SetPixelData(BitmapPixelFormat.Bgra8, BitmapAlphaMode.Ignore, (uint)bitmap.PixelWidth, (uint)bitmap.PixelHeight, 96.0, 96.0, pixels);
-                        await encoder.FlushAsync();
-                        await stream.FlushAsync();
-                        await pixelStream.FlushAsync();
-                        stream.Dispose();
-                        pixelStream.Dispose();
-                        //await Task.Delay(TimeSpan.FromMilliseconds(10)) 
-
-                        this.ThumbnailExists = true;
-                        Logging.Logger.Info(string.Format("{0}::{1} {2} {3} - Saved", this.GetType().Name, methodName, this.file.Name, this.hash));
-                    }
-
-                    this.ReleaseThumbnailSavingLock();
-                }
-                #region end
-            }
-            catch (UnauthorizedAccessException e)
-            {
-                Logging.Logger.Info(string.Format("{0}::{1} {2} - Already being written", this.GetType().Name, methodName, this.file.Name));
-            }
-            catch (Exception e)
-            {
-                if (!e.Message.StartsWith("Cannot create a file when that file already exists."))
-                {
-                    bSucceeded = false;
-                    exception = e;
-                }
-                else
-                {
-                    this.ThumbnailExists = true;
-                    Logging.Logger.Info(string.Format("{0}::{1} {2} {3} - Already saved", this.GetType().Name, methodName, this.file.Name, this.hash));
-                    this.ReleaseThumbnailSavingLock();
-                }
-            }
-            finally
-            {
-                Logging.Logger.Info(string.Format("{0}::{1} {2} - Complete", this.GetType().Name, methodName, this.file.Name));
-            }
-
-            if (!bSucceeded)
-            {
-                Logging.Logger.Critical(string.Format("{0}::{1} {2} - Failed", this.GetType().Name, this.file.Name, exception.ToString()));
-                await Task.Delay(TimeSpan.FromSeconds(5));
-                throw exception;
-            }
-                #endregion
-        }
 
         private static StorageFolder storageFolder;
 

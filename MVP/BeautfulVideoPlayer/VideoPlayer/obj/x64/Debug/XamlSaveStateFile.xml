@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="e:\backup\desktop\hardware\mvp\beautfulvideoplayer\videoplayer\obj\x64\debug\intermediatexaml\basicmediaplayback.exe" HashGuid="578f8eaf-8679-51aa-8d7e-d27b3c23b4c0" />
+    <LocalAssembly PathName="e:\backup\desktop\hardware\mvp\beautfulvideoplayer\videoplayer\obj\x64\debug\intermediatexaml\basicmediaplayback.exe" HashGuid="57d95794-4f7f-ea87-105b-0bacaed968fa" />
     <ReferenceAssembly PathName="e:\backup\desktop\hardware\mvp\beautfulvideoplayer\animationlibrary\bin\x64\debug\animationlibrary.winmd" HashGuid="63b3462d-a260-d1a4-0106-3d852824b5b9" />
     <ReferenceAssembly PathName="e:\backup\desktop\hardware\mvp\beautfulvideoplayer\applicationconfiguration\bin\x64\debug\applicationconfiguration.winmd" HashGuid="842daad3-3d9b-3e9b-6cb2-415ba3a5e22d" />
     <ReferenceAssembly PathName="e:\backup\desktop\hardware\mvp\beautfulvideoplayer\packages\caliburn.micro.core.2.0.0\lib\portable-net45+win8+wp8+wpa81\caliburn.micro.dll" HashGuid="9d39451b-c8d7-f78a-6a7d-71bd9b0f1167" />
@@ -10,6 +10,6 @@
     <ReferenceAssembly PathName="e:\backup\desktop\hardware\mvp\beautfulvideoplayer\logging\bin\x64\debug\logging.winmd" HashGuid="6452d507-cba0-1b20-a1e0-b132cad878c9" />
     <ReferenceAssembly PathName="e:\backup\desktop\hardware\mvp\beautfulvideoplayer\packages\caliburn.micro.2.0.0\lib\win81\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
     <ReferenceAssembly PathName="e:\backup\desktop\hardware\mvp\beautfulvideoplayer\packages\caliburn.micro.2.0.0\lib\win81\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
-    <ReferenceAssembly PathName="e:\backup\desktop\hardware\mvp\beautfulvideoplayer\videofolders2\bin\x64\debug\videofolders.dll" HashGuid="99c96389-6603-02d6-bc82-d4ebd13eed5c" />
+    <ReferenceAssembly PathName="e:\backup\desktop\hardware\mvp\beautfulvideoplayer\videofolders2\bin\x64\debug\videofolders.dll" HashGuid="3487c547-1760-629a-f79e-29bd668c82a2" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

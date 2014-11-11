@@ -234,6 +234,19 @@ namespace VideoFolders
 
         private bool dirty;
 
+        public bool Dirty
+        {
+            get
+            {
+                return this.dirty;
+            }
+
+            set
+            {
+                this.dirty = value;
+            }
+        }
+
         public async Task SaveToXml()
         {
             #region start
@@ -461,7 +474,7 @@ namespace VideoFolders
                 }
             }
 
-            //if (!this.folderFileMap.ContainsKey(folder.Path))
+            if (!this.folderFileMap.ContainsKey(folder.Path))
             {
                 Logging.Logger.Info(string.Format("{0}::{1} - Di not find files in cache", this.GetType().Name, "GetFilesForFolder"));
                 sortedList = new SortedList();
