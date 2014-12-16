@@ -1,0 +1,198 @@
+// This #include statement was automatically added by the Spark IDE.
+#include "elapsedMillis/elapsedMillis.h"
+
+// Define the pins we're going to call pinMode on
+
+int x = 0;
+int y = 0;
+int z = 0;
+int piezo = D5;
+int led = D7;
+
+
+
+int thresholdToExitGameLoop = 1000;
+int countToExitTheGameLoop = 0;
+
+int intervalForSoundTrigger = 10000; // initialize to 10ms
+
+int countSinceSoundPlayed = 0;
+int soundPlayedThreshold = 0;
+
+
+int old_x = 0;
+int old_y = 0;
+int old_z = 0;
+int change_x = 0;
+int change_y = 0;
+int change_z = 0;
+int change = 0;
+
+elapsedMillis timeElapsed; //declare global if you don't want it reset every time loop runs
+bool serial = false;
+int gameMode = 0;
+
+int changeMode(String args)
+{
+    if(serial)
+	{
+        Serial.println("Changing game mode");
+        Serial.print("Old game: ");
+    	Serial.println(gameMode);
+	}
+    
+    if(args == "0")
+    {
+        gameMode = 0;
+    }
+    
+    if(args == "1")
+    {
+        gameMode = 1;
+    }
+    
+    if(serial)
+	{
+    	Serial.print("New game: ");
+    	Serial.println(gameMode);
+	}
+	
+	return 0;
+}
+
+// This routine runs only once upon reset
+void setup() 
+{
+    if(serial)
+	{
+		Serial.begin(9600);
+		while(!Serial.available());
+		Serial.println("Serial enabled!");
+	}
+    pinMode(A0, INPUT);
+    pinMode(A1, INPUT);
+    pinMode(A2, INPUT);
+    pinMode(piezo, OUTPUT); 
+    pinMode(led, OUTPUT);
+    
+    if(gameMode == 0)
+    {
+      change = 20;
+    }
+    else
+    {
+      change = 50;  
+    }
+	
+	Spark.function("changeMode", changeMode);
+}
+
+// This routine gets called repeatedly, like once every 5-15 milliseconds.
+// Spark firmware interleaves background CPU activity associated with WiFi + Cloud activity with your code. 
+// Make sure none of your code delays or blocks for too long (like more than 5 seconds), or weird things can happen.
+void loop() {
+
+  // this is means game is ON. 
+  // make the peizo to sound 
+  // start counting the tilts 
+  // if tilt threshold is reached, publish to spark 
+  // turn the peizo off 
+  // reset timeElapsed to 0 
+  if (timeElapsed > intervalForSoundTrigger || gameMode == 0) 
+  {	
+      float force = 0;
+      if (countSinceSoundPlayed <= soundPlayedThreshold && gameMode != 0) 
+      {
+          // start the tone  
+          //tone(piezo, 852, 500);
+          digitalWrite(piezo, HIGH);
+          delay(1000);
+          digitalWrite(piezo, LOW);
+          delay(500);
+      }
+
+      countSinceSoundPlayed++;
+      
+      x = analogRead(A0);
+      y = analogRead(A1);
+      z = analogRead(A2);
+      
+	  if(serial)
+	  {
+		Serial.println(old_x);
+		Serial.println(old_y);
+		Serial.println(old_z);
+
+		Serial.println(x);
+		Serial.println(y);
+		Serial.println(z);
+	  }
+
+      change_x = abs(old_x - x);
+      change_y = abs(old_y - y);
+      change_z = abs(old_z - z);
+      
+	  if(serial)
+	  {
+		Serial.println(change_x);
+		Serial.println(change_y);
+		Serial.println(change_z);
+	  }
+      
+      countToExitTheGameLoop++;
+      
+      // if we have waited long enough and the game has been engaged with 
+      // then move on and wait for a time interval to re-engage with the game 
+      // else go ahead and keep looking at the tilt sensor reading
+      if (countToExitTheGameLoop < thresholdToExitGameLoop || gameMode == 0)
+      {
+          if((change_x > change || change_y > change || change_z > change) && (old_x != 0 && old_y != 0 && old_z != 0) )
+		  { 
+                //tone(piezo, 852, 500);
+                Spark.publish("relaycommand", "HIGH");
+                digitalWrite(led, HIGH);
+                
+                if (gameMode == 0)
+				{
+					digitalWrite(piezo, HIGH);
+					delay(1000);
+					digitalWrite(piezo, LOW);
+					delay(1000);
+				}
+				else
+				{
+				    delay(500);
+				}
+				
+                x = 0;
+                y = 0;
+                z = 0;
+                //Spark.publish("dispensercommand", "CLOSE");
+                //delay(500);
+				
+                digitalWrite(led, LOW);                
+                timeElapsed = 0;
+                countToExitTheGameLoop = 0;
+                countSinceSoundPlayed = 0 ;
+                // TODO: turn the tone off            
+          }    
+      }
+      else 
+      {
+            digitalWrite(led, LOW);
+            timeElapsed = 0;
+            countToExitTheGameLoop = 0 ;
+            countSinceSoundPlayed =0 ;
+            // TODO: turn off the tone
+      }
+      
+      old_x = x;
+      old_y = y;
+      old_z = z;
+  }
+  else 
+  {
+      // this means game is off 
+      // dont do anything wait for time-elapsed and game to turn on
+  }
+}
