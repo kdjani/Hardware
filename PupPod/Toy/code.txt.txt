@@ -30,7 +30,8 @@ int change = 0;
 
 elapsedMillis timeElapsed; //declare global if you don't want it reset every time loop runs
 bool serial = false;
-int gameMode = 0;
+int gameMode = 2;
+bool userTreat = false;
 
 int changeMode(String args)
 {
@@ -51,10 +52,36 @@ int changeMode(String args)
         gameMode = 1;
     }
     
+    if(args == "2")
+    {
+        gameMode = 2;
+    }
+    
     if(serial)
 	{
     	Serial.print("New game: ");
     	Serial.println(gameMode);
+	}
+	
+	return 0;
+}
+
+int dispense(String args)
+{
+    if(serial)
+	{
+        Serial.println("Dispensing based on user...");
+	}
+    
+    if(args == "true")
+    {
+        userTreat = true;
+    }
+    
+    if(serial)
+	{
+    	Serial.print("userTreat: ");
+    	Serial.println(userTreat);
 	}
 	
 	return 0;
@@ -85,6 +112,7 @@ void setup()
     }
 	
 	Spark.function("changeMode", changeMode);
+	Spark.function("dispense", dispense);
 }
 
 // This routine gets called repeatedly, like once every 5-15 milliseconds.
@@ -98,10 +126,10 @@ void loop() {
   // if tilt threshold is reached, publish to spark 
   // turn the peizo off 
   // reset timeElapsed to 0 
-  if (timeElapsed > intervalForSoundTrigger || gameMode == 0) 
+  if (timeElapsed > intervalForSoundTrigger || gameMode == 0 || gameMode == 2) 
   {	
       float force = 0;
-      if (countSinceSoundPlayed <= soundPlayedThreshold && gameMode != 0) 
+      if (countSinceSoundPlayed <= soundPlayedThreshold && gameMode != 0 && gameMode != 2)
       {
           // start the tone  
           //tone(piezo, 852, 500);
@@ -144,15 +172,15 @@ void loop() {
       // if we have waited long enough and the game has been engaged with 
       // then move on and wait for a time interval to re-engage with the game 
       // else go ahead and keep looking at the tilt sensor reading
-      if (countToExitTheGameLoop < thresholdToExitGameLoop || gameMode == 0)
+      if (countToExitTheGameLoop < thresholdToExitGameLoop || gameMode == 0 || gameMode == 2)
       {
-          if((change_x > change || change_y > change || change_z > change) && (old_x != 0 && old_y != 0 && old_z != 0) )
+          if((change_x > change || change_y > change || change_z > change) && (old_x != 0 && old_y != 0 && old_z != 0) || (gameMode == 2 && userTreat == true))
 		  { 
                 //tone(piezo, 852, 500);
                 Spark.publish("relaycommand", "HIGH");
                 digitalWrite(led, HIGH);
                 
-                if (gameMode == 0)
+                if (gameMode == 0 || gameMode == 2)
 				{
 					digitalWrite(piezo, HIGH);
 					delay(1000);
@@ -162,6 +190,11 @@ void loop() {
 				else
 				{
 				    delay(500);
+				}
+				
+				if(gameMode == 2 && userTreat == true)
+				{
+				    userTreat = false;
 				}
 				
                 x = 0;
