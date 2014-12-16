@@ -1,2 +1,4 @@
 curl "https://api.spark.io/v1/devices/53ff6a066667574859262067/changeMode" -d access_token=d75f99e287bf8b71f900d44d3bcda6a770e695fa -d args="0" -k
 curl "https://api.spark.io/v1/devices/53ff6a066667574859262067/changeMode" -d access_token=d75f99e287bf8b71f900d44d3bcda6a770e695fa -d args="1" -k
+curl "https://api.spark.io/v1/devices/53ff6a066667574859262067/changeMode" -d access_token=d75f99e287bf8b71f900d44d3bcda6a770e695fa -d args="2" -k
+curl "https://api.spark.io/v1/devices/53ff6a066667574859262067/dispense" -d access_token=d75f99e287bf8b71f900d44d3bcda6a770e695fa -d args="true" -k
